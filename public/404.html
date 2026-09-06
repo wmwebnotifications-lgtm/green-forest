@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - nie znaleziono | Green Forest</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" href="/assets/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .e404 { min-height: 80vh; display: grid; place-items: center; text-align: center; padding: 3rem clamp(1rem,4vw,2rem); }
+    .e404 img { height: 84px; width: auto; margin: 0 auto 1.4rem; }
+    .e404 .code { font-family: var(--font-display); font-size: clamp(3.5rem,3rem+6vw,7rem); color: var(--green-700); line-height: 1; margin: 0; }
+    .e404 h1 { font-size: var(--h2); color: var(--green-800); margin: .4rem 0 .6rem; }
+    .e404 p { color: var(--muted); max-width: 44ch; margin: 0 auto 1.6rem; }
+    .e404 .links { display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; }
+  </style>
+</head>
+<body>
+  <div class="e404">
+    <div>
+      <img src="/assets/logo-header-green.svg" alt="Green Forest" />
+      <p class="code">404</p>
+      <h1>Nie znaleziono strony</h1>
+      <p>Ups! Ta strona nie istnieje albo została przeniesiona. Wróć na stronę główną albo napisz do nas - chętnie pomożemy.</p>
+      <div class="links">
+        <a class="btn" href="/">Strona główna</a>
+        <a class="btn btn--ghost" href="/kontakt/">Kontakt</a>
+        <a class="btn btn--ghost" href="tel:+48694757680">📞 694 757 680</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

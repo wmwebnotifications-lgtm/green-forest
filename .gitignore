@@ -1,0 +1,21 @@
+# deps
+node_modules/
+
+# wrangler / cloudflare
+.wrangler/
+.dev.vars
+.env
+.env.*
+
+# build
+dist/
+.cache/
+
+# system
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/
+*.log

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ==== SEO (do uzupełnienia: domena docelowa) ==== -->
+  <title>Green Forest - wycinka drzew, arborystyka i drewno opałowe | Puławy i okolice</title>
+  <meta name="description" content="Green Forest - wycinka drzew trudnych systemem linowym, arborystyka, zagospodarowanie terenów zielonych i sprzedaż drewna opałowego. Puławy, Lublin, Dęblin i okolice, dojazd do 150 km. Darmowa wycena: 694 757 680." />
+  <link rel="canonical" href="https://greenforest.pl/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="PL-LU" />
+  <meta name="geo.placename" content="Puławy" />
+  <meta name="keywords" content="wycinka drzew Puławy, arborysta Puławy, wycinka drzew trudnych, wycinka systemem linowym, drewno opałowe Puławy, zagospodarowanie terenów zielonych, karczowanie działek, przycinanie żywopłotów, zrębkowanie gałęzi, drewno tartaczne" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Green Forest - wycinka drzew i arborystyka | Puławy i okolice" />
+  <meta property="og:description" content="Wycinka drzew trudnych, arborystyka, tereny zielone i drewno na opał. Puławy i okolice, dojazd do 150 km. Darmowa wycena." />
+  <meta property="og:image" content="/img/og-image.jpg" />
+  <meta property="og:locale" content="pl_PL" />
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- Mapa: Leaflet (OpenStreetMap) - hostowany lokalnie -->
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css" />
+
+  <!-- ==== Dane strukturalne: LocalBusiness ==== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Green Forest",
+    "description": "Wycinka drzew trudnych systemem linowym, arborystyka, zagospodarowanie terenów zielonych, koszenie i karczowanie, sprzedaż drewna opałowego i tartacznego.",
+    "url": "https://greenforest.pl/",
+    "telephone": "+48 694 757 680",
+    "email": "green.forest33@op.pl",
+    "image": "/img/og-image.jpg",
+    "areaServed": [
+      { "@type": "City", "name": "Puławy" },
+      { "@type": "City", "name": "Lublin" },
+      { "@type": "City", "name": "Dęblin" },
+      { "@type": "City", "name": "Garwolin" },
+      { "@type": "City", "name": "Opole Lubelskie" },
+      { "@type": "City", "name": "Niedrzwica Duża" },
+      { "@type": "City", "name": "Góra Puławska" },
+      { "@type": "City", "name": "Zwoleń" },
+      { "@type": "City", "name": "Bychawa" },
+      { "@type": "City", "name": "Lipsko" }
+    ],
+    "address": { "@type": "PostalAddress", "addressLocality": "Puławy", "addressRegion": "lubelskie", "addressCountry": "PL" },
+    "priceRange": "$$",
+    "openingHours": "Mo-Sa 07:00-19:00",
+    "sameAs": ["https://www.facebook.com/profile.php?id=61585028168766"]
+  }
+  </script>
+</head>
+<body>
+  <!-- ==== Nawigacja ==== -->
+  <header class="nav" id="top">
+    <a class="nav__logo" href="/"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest — wycinka drzew i drewno opałowe, Puławy" /></a>
+    <nav class="nav__links" aria-label="Główna">
+      <a href="/">Start</a>
+      <a href="/#o-nas">O nas</a>
+      <a href="/#uslugi">Usługi</a>
+      <a href="/cennik/">Cennik</a>
+      <a href="/#realizacje">Realizacje</a>
+      <a href="/#opinie">Opinie</a>
+      <a href="/blog/">Blog</a>
+      <a href="/kontakt/">Kontakt</a>
+    </nav>
+    <div class="nav__actions">
+      <div class="socials socials--nav" aria-label="Media społecznościowe"><a href="https://www.facebook.com/profile.php?id=61585028168766" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.1H7.4V13h2.8v8h3.3z"/></svg></a></div>
+      <a class="btn btn--sm" href="tel:+48694757680">Zadzwoń</a>
+      <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__top">
+      <span class="nav__logo"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest" /></span>
+      <button class="mobile-menu__close" aria-label="Zamknij">&times;</button>
+    </div>
+    <a href="/">Start</a>
+    <a href="/#o-nas">O nas</a>
+    <a href="/#uslugi">Usługi</a>
+    <a href="/cennik/">Cennik</a>
+    <a href="/#realizacje">Realizacje</a>
+    <a href="/#opinie">Opinie</a>
+    <a href="/blog/">Blog</a>
+    <a href="/kontakt/">Kontakt</a>
+    <div class="mobile-menu__cta">
+      <a class="btn" href="tel:+48694757680">📞 694 757 680</a>
+      <a class="btn btn--ghost" href="/kontakt/">Napisz do nas</a>
+    </div>
+    <div class="socials " aria-label="Media społecznościowe"><a href="https://www.facebook.com/profile.php?id=61585028168766" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.1H7.4V13h2.8v8h3.3z"/></svg></a></div>
+  </div>
+
+  <!-- ==== Hero ==== -->
+  <section class="hero">
+    <div class="hero__inner">
+      <img class="hero__logo" src="/img/logo-greenforest.svg" alt="Green Forest" />
+      <p class="hero__eyebrow">Puławy i okolice · dojazd do 150 km</p>
+      <div class="hero__winter"><span>Nadchodzi zima!</span><a href="/cennik/#drewno">Sprzedajemy drewno na opał</a></div>
+      <h1 class="hero__title"><span>Witaj w Green Forest!</span><span>Wchodzimy tam, gdzie inni się boją.</span></h1>
+      <p class="hero__lead"><span class="hero__lead-main">Wycinka trudnych drzew, pielęgnacja zieleni, karczowanie działek, zagospodarowanie terenów zielonych,</span> <span class="hero__lead-sale"><strong>sprzedaż drewna na opał.</strong></span><span>Bez kombinowania, bezpiecznie i z pełnym uprzątnięciem terenu - w Puławach i okolicy.</span></p>
+      <div class="hero__cta">
+        <a class="btn" href="#kontakt">Darmowa wycena</a>
+        <a class="btn btn--ghost" href="tel:+48694757680">📞 694 757 680</a>
+      </div>
+      <div class="hero__trust">
+        <span>🌲 <b>Puławy + 150 km</b></span>
+        <span>🧗 <b>Arborystyka</b></span>
+        <span>🧹 <b>Sprzątamy po pracy</b></span>
+        <span class="hero__trust-wide">🛻 <b>Sprzedaż drewna opałowego:<br />- dąb, grab, sosna, osika, brzoza, klon, mix, zrzyny sosnowe w paczkach<br />TRANSPORT GRATIS DO 15km</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== Pasek odznak zaufania ==== -->
+  <div class="trustbar">
+    <div class="trustbar__wrap">
+      <span class="trustbar__item">Na rynku jesteśmy 7 lat - oferujemy darmową wycenę, dojazd do klienta, wystawimy fakturę VAT<br />zapraszamy do kontaktu :-)</span>
+    </div>
+  </div>
+
+  <!-- ==== Pasek zaufania ==== -->
+  <div class="usp">
+    <div class="usp__wrap">
+      <div class="usp__item"><span class="ic">🛡️</span><div><b>Bezpiecznie</b>Profesjonalny sprzęt i praca na linach, także przy budynkach.</div></div>
+      <div class="usp__item"><span class="ic">🚚</span><div><b>Dojazd do 150 km</b>Puławy, Lublin, Dęblin i okolice - dojeżdżamy.</div></div>
+      <div class="usp__item"><span class="ic">🧾</span><div><b>Wycena za darmo</b>Pierwszy krok nic nie kosztuje - oceniamy i doradzamy.</div></div>
+      <div class="usp__item"><span class="ic">🌿</span><div><b>Po nas porządek</b>Zrębkujemy gałęzie i sprzątamy teren po pracy.</div></div>
+    </div>
+  </div>
+
+  <!-- ==== Usługi ==== -->
+  <section class="section" id="uslugi">
+    <p class="section__eyebrow reveal">Usługi</p>
+    <h2 class="section__title reveal">Co robimy</h2>
+    <p class="section__lead reveal">Poniżej znajdą Państwo spis świadczonych przez nas usług.</p>
+    <div class="cards">
+      <article class="card reveal">
+        <span class="card__icon">🪚</span>
+        <h3>Wycinka drzew trudnych</h3>
+        <p>Ścinamy wielkie, niebezpieczne drzewa w profesjonalny sposób.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__icon">🧗</span>
+        <h3>Wycinka systemem linowym</h3>
+        <p>Krok po kroku, bezpiecznie i z wykorzystaniem metod alpinistycznych - w pobliżu zabudowań/linii energetycznych.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__icon">✂️</span>
+        <h3>Pielęgnacja ogrodów</h3>
+        <p>Przycinanie tui, żywopłotów, krzewów oraz drzewek.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__icon">🌿</span>
+        <h3>Tereny zielone i pielęgnacja zieleni</h3>
+        <p>Porządkujemy, pomagamy zagospodarować i dbamy aby Twój teren wyglądał jak z pierwszych stron gazet.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__icon">🌾</span>
+        <h3>Koszenie i karczowanie</h3>
+        <p>Koszenie nieużytków, karczowanie działek - jeśli trzeba, do gołej ziemi!</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__icon">🌳</span>
+        <h3>Zrębkowanie gałęzi</h3>
+        <p>Rozdrabniamy gałęzie na miejscu, więc: mniej odpadów - gotowy zrębek.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__icon">🔥</span>
+        <h3>Drewno opałowe</h3>
+        <p>Nadchodzi zima, warto więc zadbać o ciepło domowego ogniska - nie czekaj ;)</p>
+        <p><a class="card__link" href="/cennik/#drewno">Sprawdź ceny drewna →</a></p>
+      </article>
+      <article class="card reveal">
+        <span class="card__icon">🪵</span>
+        <h3>Drewno tartaczne</h3>
+        <p>Skup i sprzedaż drewna tartacznego - uczciwie i konkretnie!</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ==== O nas ==== -->
+  <section class="section section--split" id="o-nas">
+    <div class="reveal">
+      <p class="section__eyebrow">O nas</p>
+      <h2 class="section__title">O firmie</h2>
+      <p>Witamy!</p>
+      <p>Jeśli na Państwa działce znajduje się drzewo budzące obawy, pojawiła się potrzeba by ogarnąć naturę w ogrodzie ale brak jest czasu lub sprzętu, czy skończyło się drewno na opał - mamy na to rozwiązanie :-)</p>
+      <p>Działamy w Puławach i okolicy, z dojazdem do klienta do 150 kilometrów.<br />Cechuje nas sprawne, przemyślane działanie i profesjonalne podejście.<br />Dbamy o bezpieczeństwo, posiadamy doświadczoną i zgraną ekipę, a każde zlecenie traktujemy z wielkim zaangażowaniem.</p>
+      <ul class="ticks">
+        <li>Profesjonalny sprzęt i zespół</li>
+        <li>Bezpieczna wycinka, także drzew trudnych</li>
+        <li>Dojazd do 150 km od Puław</li>
+        <li>Uprzątnięcie terenu po pracy</li>
+      </ul>
+    </div>
+    <div class="media-placeholder reveal">
+      <img src="/assets/broszura-onas.svg" alt="Broszura Green Forest o firmie" />
+    </div>
+  </section>
+
+  <!-- ==== Obszar działania ==== -->
+  <section class="section section--muted" id="obszar">
+    <p class="section__eyebrow reveal">Obszar działania</p>
+    <h2 class="section__title reveal">Gdzie działamy</h2>
+    <p class="section__lead reveal">Baza w Puławach, dojazd do 150 km. Obsługujemy m.in.:</p>
+    <ul class="chips reveal">
+      <li><button type="button" class="chip" data-town="Puławy">Puławy</button></li><li><button type="button" class="chip" data-town="Lublin">Lublin</button></li><li><button type="button" class="chip" data-town="Dęblin">Dęblin</button></li><li><button type="button" class="chip" data-town="Garwolin">Garwolin</button></li><li><button type="button" class="chip" data-town="Opole Lubelskie">Opole Lubelskie</button></li>
+      <li><button type="button" class="chip" data-town="Niedrzwica Duża">Niedrzwica Duża</button></li><li><button type="button" class="chip" data-town="Góra Puławska">Góra Puławska</button></li><li><button type="button" class="chip" data-town="Zwoleń">Zwoleń</button></li><li><button type="button" class="chip" data-town="Bychawa">Bychawa</button></li><li><button type="button" class="chip" data-town="Lipsko">Lipsko</button></li>
+    </ul>
+    <div id="map" role="img" aria-label="Mapa obszaru działania Green Forest: Puławy i okolice w promieniu do 150 km"></div>
+    <div id="map-review" class="map-reviewbox" aria-live="polite">
+      <span class="map-reviewbox__hint">👆 Najedź na złoty znacznik, aby zobaczyć opinię klienta z danej miejscowości.</span>
+    </div>
+  </section>
+
+  <!-- ==== Kalkulator wyceny ==== -->
+  <section class="section" id="wycena">
+    <p class="section__eyebrow reveal">Szybka wycena</p>
+    <h2 class="section__title reveal">Policz orientacyjny koszt w 30 sekund</h2>
+    <p class="section__lead reveal">Wybierz parametry - pokażemy orientacyjny przedział cenowy.<br />Dokładną, <strong>darmową wycenę</strong> potwierdzimy telefonicznie lub po oględzinach.</p>
+    <div class="calc reveal">
+      <div class="calc__form">
+        <label class="calc__field">Usługa
+          <select id="calc-service">
+            <option value="wycinka">Wycinka drzewa</option>
+            <option value="przycinka">Przycinanie / formowanie korony</option>
+            <option value="zywoplot">Przycinanie żywopłotu</option>
+            <option value="karczowanie">Karczowanie / koszenie działki</option>
+            <option value="drewno">Drewno opałowe</option>
+          </select>
+        </label>
+        <label class="calc__field" data-for="wycinka">Wysokość drzewa
+          <select id="calc-height">
+            <option value="200">do 5 m</option>
+            <option value="450">5-10 m</option>
+            <option value="850">10-15 m</option>
+            <option value="1500">powyżej 15 m</option>
+          </select>
+        </label>
+        <label class="calc__field" data-for="wycinka przycinka">Dostęp / otoczenie
+          <select id="calc-access">
+            <option value="1">otwarty teren</option>
+            <option value="1.5">ograniczony dostęp</option>
+            <option value="2.4">nad budynkiem / przy liniach (metoda linowa)</option>
+          </select>
+        </label>
+        <label class="calc__field" data-for="wycinka przycinka">Liczba drzew
+          <input id="calc-qty" type="number" min="1" max="50" value="1" />
+        </label>
+        <label class="calc__field" data-for="zywoplot">Długość żywopłotu (mb)
+          <input id="calc-mb" type="number" min="1" max="500" value="20" />
+        </label>
+        <label class="calc__field" data-for="karczowanie">Powierzchnia (m²)
+          <input id="calc-m2" type="number" min="10" max="20000" value="300" />
+        </label>
+        <label class="calc__field" data-for="drewno">Ilość drewna (mp)
+          <input id="calc-mp" type="number" min="1" max="60" value="3" />
+        </label>
+        <label class="calc__check" data-for="wycinka przycinka zywoplot karczowanie"><input id="calc-urgent" type="checkbox" /> Pilne / poza kolejnością (+30%)</label>
+      </div>
+      <div class="calc__result">
+        <p class="calc__label">Orientacyjny koszt</p>
+        <p class="calc__price" id="calc-price">—</p>
+        <p class="calc__note" id="calc-note">To wstępny szacunek. Ostateczną, darmową wycenę podamy po kontakcie.</p>
+        <a class="btn" id="calc-cta" href="/kontakt/">Zamów darmową dokładną wycenę</a>
+        <a class="btn btn--ghost" href="tel:+48694757680">📞 694 757 680</a>
+      </div>
+    </div>
+    <p class="small-note reveal" style="text-align:center">Podane kwoty są orientacyjne (dane demonstracyjne) i nie stanowią oferty w rozumieniu Kodeksu cywilnego.</p>
+  </section>
+
+  <!-- ==== Realizacje (rolki z FB / wideo z pracy) ==== -->
+  <section class="section" id="realizacje">
+    <p class="section__eyebrow reveal">Portfolio</p>
+    <h2 class="section__title reveal">Realizacje</h2>
+    <p class="section__lead reveal">Nagrania prosto z naszego profilu - zobacz kawałek naszej codziennej pracy.</p>
+    <div class="reels">
+      <div class="reels__item reveal">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F782269448275235%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="eager" title="Green Forest - realizacja 1 (wideo z Facebooka)"></iframe>
+        <a class="reels__fallback" href="https://www.facebook.com/reel/782269448275235/" target="_blank" rel="noopener">Otwórz rolkę na Facebooku</a>
+      </div>
+      <div class="reels__item reveal">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2071828056723656%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="eager" title="Green Forest - realizacja 2 (wideo z Facebooka)"></iframe>
+        <a class="reels__fallback" href="https://www.facebook.com/reel/2071828056723656/" target="_blank" rel="noopener">Otwórz rolkę na Facebooku</a>
+      </div>
+      <div class="reels__item reveal">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F960587363664989%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="eager" title="Green Forest - realizacja 3 (wideo z Facebooka)"></iframe>
+        <a class="reels__fallback" href="https://www.facebook.com/reel/960587363664989/" target="_blank" rel="noopener">Otwórz rolkę na Facebooku</a>
+      </div>
+      <div class="reels__item reveal">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2078149859794496%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="eager" title="Green Forest - realizacja 4 (wideo z Facebooka)"></iframe>
+        <a class="reels__fallback" href="https://www.facebook.com/reel/2078149859794496/" target="_blank" rel="noopener">Otwórz rolkę na Facebooku</a>
+      </div>
+      <!-- Aby DODAĆ kolejną rolkę: skopiuj jeden blok <div class="reels__item">...</div>
+           i w iframe podmień adres rolki (część po href=...). Kod bierzesz z FB:
+           przy rolce -> "..." -> "Umieść" / "Osadź" -> skopiuj <iframe>. -->
+    </div>
+    <p class="reels__more reveal"><a class="btn btn--ghost" href="https://www.facebook.com/profile.php?id=61585028168766" target="_blank" rel="noopener">Zobacz więcej na Facebooku</a></p>
+    <div class="realizacje-images reveal">
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-1.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-1.svg" alt="Green Forest - wycinka drzew" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-drewno-2.svg" data-lightbox-alt="Green Forest - drewno opałowe"><img src="/assets/green-forest-drewno-2.svg" alt="Green Forest - drewno opałowe" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-karczowanie-7.svg" data-lightbox-alt="Green Forest - karczowanie"><img src="/assets/green-forest-karczowanie-7.svg" alt="Green Forest - karczowanie" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-prace-w-terenie-8.svg" data-lightbox-alt="Green Forest - prace w terenie"><img src="/assets/green-forest-prace-w-terenie-8.svg" alt="Green Forest - prace w terenie" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-rebak-4.svg" data-lightbox-alt="Green Forest - rębakowanie gałęzi"><img src="/assets/green-forest-rebak-4.svg" alt="Green Forest - rębakowanie gałęzi" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-3.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-3.svg" alt="Green Forest - wycinka drzew" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-5.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-5.svg" alt="Green Forest - wycinka drzew" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-6.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-6.svg" alt="Green Forest - wycinka drzew" /></button>
+    </div>
+    <div class="lightbox" id="realizacje-lightbox" aria-hidden="true">
+      <button type="button" class="lightbox__close" aria-label="Zamknij podgląd">&times;</button>
+      <img class="lightbox__image" alt="" />
+    </div>
+  </section>
+
+  <!-- ==== Przed / Po (suwak) ==== -->
+  <!-- DEMO: grafiki poglądowe w /img/demo/ - podmień na realne zdjęcia przed/po z realizacji Kuby -->
+  <section class="section" id="przed-po">
+    <p class="section__eyebrow reveal">Efekty pracy</p>
+    <h2 class="section__title reveal">Zobacz różnicę: przed i po</h2>
+    <p class="section__lead reveal">Przeciągnij suwak, aby porównać teren przed naszą pracą i po niej. <span class="small-note">(grafiki poglądowe - wkrótce zastąpimy je zdjęciami realizacji)</span></p>
+    <div class="ba reveal" id="ba">
+      <div class="ba__img ba__img--after"><img src="/img/demo/po.svg" alt="Działka po wycince i uprzątnięciu terenu" /></div>
+      <div class="ba__img ba__img--before" id="ba-before"><img src="/img/demo/przed.svg" alt="Działka z drzewem przed wycinką" /></div>
+      <input class="ba__range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Suwak porównania przed/po" />
+      <div class="ba__handle" id="ba-handle" aria-hidden="true"><span>‹ ›</span></div>
+    </div>
+  </section>
+
+  <!-- ==== Opinie (inspiracja: Timber Fuel) ==== -->
+  <section class="section section--muted" id="opinie">
+    <p class="section__eyebrow reveal">Zaufali nam</p>
+    <h2 class="section__title reveal">Opinie klientów</h2>
+    <p class="section__lead reveal">Prawdziwe opinie klientów z profilu <a href="https://fixly.pl/profil/m39o0u6q" target="_blank" rel="noopener">Fixly</a> - średnia <strong>4,5/5</strong> z 11 opinii.</p>
+    <div class="reviews reveal">
+      <button class="reviews__nav reviews__nav--prev" type="button" aria-label="Poprzednie opinie">‹</button>
+      <div class="reviews__track" tabindex="0">
+        <blockquote class="quote">
+          <p class="stars" aria-label="Ocena 5 na 5">★★★★★</p>
+          <p>„Usługa została wykonana błyskawicznie i z dużym profesjonalizmem. Zdecydowanie polecam!"</p>
+          <cite>- Piotr, Kazimierz Dolny · wycinka drzew</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p class="stars" aria-label="Ocena 5 na 5">★★★★★</p>
+          <p>„Usługę wykonano szybko i bardzo fachowo. Z pewnością ponownie skorzystam z usług firmy w przyszłości."</p>
+          <cite>- Zbigniew, Karczmiska Pierwsze · wycinka drzew</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p class="stars" aria-label="Ocena 5 na 5">★★★★★</p>
+          <p>„Rozsądne ceny. Dobra jakość."</p>
+          <cite>- Grzegorz, Puławy · wycinka drzew</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p class="stars" aria-label="Ocena 5 na 5">★★★★★</p>
+          <p>„Naprawdę firma godna polecenia. Płot ze sztachet wykonany bardzo dobrze. Polecam!"</p>
+          <cite>- Rafał, Warszawa · montaż ogrodzenia</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p class="stars" aria-label="Ocena 5 na 5">★★★★★</p>
+          <p>„Super fachowiec."</p>
+          <cite>- Robert, Warszawa · odśnieżanie dachów</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p class="stars" aria-label="Ocena 5 na 5">★★★★★</p>
+          <p>„Polecam. Bardzo szybka realizacja."</p>
+          <cite>- Bartosz, Poniatowa · wynajem kontenerów</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p class="stars" aria-label="Ocena 5 na 5">★★★★★</p>
+          <p>„Ok, polecam wszystkim."</p>
+          <cite>- Przemysław, Nałęczów · usługi ogrodnicze</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p class="stars" aria-label="Ocena 5 na 5">★★★★★</p>
+          <p>„Polecam. 👍"</p>
+          <cite>- Jarosław, Garbatka-Letnisko · montaż ogrodzenia</cite>
+        </blockquote>
+      </div>
+      <button class="reviews__nav reviews__nav--next" type="button" aria-label="Następne opinie">›</button>
+    </div>
+    <p class="reels__more reveal"><a class="btn btn--ghost" href="https://fixly.pl/profil/m39o0u6q" target="_blank" rel="noopener">Zobacz wszystkie opinie na Fixly</a></p>
+  </section>
+
+  <!-- ==== Kontakt / CTA ==== -->
+  <section class="section" id="kontakt">
+    <div class="contact-block">
+      <div class="contact-info reveal">
+        <p class="section__eyebrow">Kontakt</p>
+        <h2 class="section__title">Porozmawiajmy o Twoim zleceniu</h2>
+        <p>Zadzwoń, napisz maila albo wypełnij formularz.<br />Odpowiemy na pytania i pomożemy ustalić zakres prac.<br />Wycena nic nie kosztuje.</p>
+        <p class="eyebrow">Dane kontaktowe</p>
+        <p><a href="tel:+48694757680">📞 694 757 680</a></p>
+        <p><a href="mailto:green.forest33@op.pl">✉️ green.forest33@op.pl</a></p>
+        <p class="eyebrow">Obszar działania</p>
+        <p>Puławy i okolice - dojazd do 150 km</p>
+        <p class="eyebrow">Godziny pracy</p>
+        <p>Pon-Sob 07:00-19:00</p>
+        <div class="socials" aria-label="Media społecznościowe" style="margin-top:1.2rem"><a href="https://www.facebook.com/profile.php?id=61585028168766" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.1H7.4V13h2.8v8h3.3z"/></svg></a></div>
+      </div>
+      <div class="reveal"><form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="6956cba5-ffdc-494b-af7f-e63dfeb54c3f" />
+        <input type="hidden" name="subject" value="Nowe zapytanie ze strony Green Forest" />
+        <input type="hidden" name="from_name" value="Green Forest - formularz WWW" />
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
+        <div class="field">
+          <label for="cf-imie">Twoje imię *</label>
+          <input id="cf-imie" name="imie" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="cf-tel">Numer telefonu *</label>
+          <input id="cf-tel" name="telefon" type="tel" autocomplete="tel" required />
+        </div>
+        <div class="field">
+          <label for="cf-mail">E-mail (opcjonalnie)</label>
+          <input id="cf-mail" name="email" type="email" autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="cf-temat">Czego dotyczy zapytanie? *</label>
+          <select id="cf-temat" name="temat" required>
+            <option value="" disabled selected>Wybierz temat</option>
+            <option>Wycinka drzew trudnych</option>
+            <option>Wycinka systemem linowym</option>
+            <option>Pielęgnacja ogrodów</option>
+            <option>Tereny zielone i pielęgnacja zieleni</option>
+            <option>Koszenie i karczowanie</option>
+            <option>Zrębkowanie gałęzi</option>
+            <option>Drewno opałowe</option>
+            <option>Drewno tartaczne</option>
+            <option>Inne</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="cf-msg">Twoja wiadomość</label>
+          <textarea id="cf-msg" name="wiadomosc" placeholder="Opisz drzewo / teren, lokalizację, ewentualnie dołącz zdjęcie mailowo."></textarea>
+        </div>
+        <label class="consent"><input type="checkbox" required /> <span>Zapoznałem/am się z <a href="/polityka-prywatnosci/" target="_blank" rel="noopener">polityką prywatności</a> i zgadzam się na kontakt w sprawie zapytania. *</span></label>
+        <button class="btn" type="submit">Wyślij zapytanie</button>
+        <p class="form-status" role="status"></p>
+        <p class="form-note">* pola wymagane. Wiadomość trafia prosto na naszą skrzynkę - odpowiadamy zwykle tego samego dnia.</p>
+      </form></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="footer__cols">
+    <div class="footer__col footer__brand">
+      <p class="footer__brand-name">🌲 Green Forest <a href="https://www.facebook.com/profile.php?id=61585028168766" target="_blank" rel="noopener" aria-label="Green Forest na Facebooku"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.1H7.4V13h2.8v8h3.3z"/></svg></a></p>
+      <p class="footer__meta" style="color:#c6d8cc">Wycinka drzew, arborystyka, tereny zielone i drewno opałowe.<br />Puławy i okolice - dojazd do 150 km.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Poradnik</h4>
+      <ul>
+        <li><a href="/blog/ile-kosztuje-wycinka-drzewa/">Ile kosztuje wycinka</a></li>
+        <li><a href="/blog/pozwolenie-na-wycinke-drzew/">Pozwolenie na wycinkę</a></li>
+        <li><a href="/blog/jakie-drewno-na-opal/">Jakie drewno na opał</a></li>
+        <li><a href="/blog/kiedy-przycinac-drzewa-zywoploty/">Kiedy przycinać</a></li>
+      </ul>
+    </div>
+    <div class="footer__col footer__contact">
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+48694757680">📞 694 757 680</a></li>
+        <li><a href="mailto:green.forest33@op.pl">✉️ green.forest33@op.pl</a></li>
+        <li>Puławy, woj. lubelskie</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© <span id="year"></span> Green Forest · dojazd do 150 km · <a href="/polityka-prywatnosci/">Polityka prywatności</a></span>
+    <span>Zamów swoją stronę na: <a href="https://wm-websolutions.pl" rel="noopener">WM Web Solutions</a></span>
+  </div>
+</footer>
+
+  <div class="fab-group">
+    <a class="fab fab--wa" href="https://wa.me/48694757680?text=Dzie%C5%84%20dobry%2C%20pisz%C4%99%20ze%20strony%20Green%20Forest%20w%20sprawie%20wyceny." target="_blank" rel="noopener" aria-label="Napisz na WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M19.11 17.21c-.29-.15-1.72-.85-1.99-.94-.27-.1-.46-.15-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.57-.89-2.15-.24-.56-.48-.49-.65-.5-.17-.01-.36-.01-.55-.01-.19 0-.51.07-.77.36-.27.29-1.01.99-1.01 2.41 0 1.42 1.04 2.8 1.18 2.99.15.19 2.05 3.13 4.96 4.39.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z M16 3.2C8.94 3.2 3.2 8.94 3.2 16c0 2.26.59 4.47 1.72 6.42L3.2 28.8l6.56-1.72c1.88 1.03 4 1.57 6.24 1.57 7.06 0 12.8-5.74 12.8-12.8S23.06 3.2 16 3.2zm0 23.4c-2 0-3.96-.54-5.66-1.55l-.41-.24-3.89 1.02 1.04-3.79-.27-.42c-1.11-1.77-1.7-3.81-1.7-5.92C5.42 10.06 10.14 5.34 16 5.34S26.58 10.06 26.58 16 21.86 26.6 16 26.6z"/></svg></a>
+    <a class="fab" href="tel:+48694757680" aria-label="Zadzwoń">📞</a>
+  </div>
+
+  <script src="/main.js" defer></script>
+
+  <!-- Mapa zasięgu: Leaflet + OpenStreetMap (bez klucza API, hostowany lokalnie) -->
+  <script src="/vendor/leaflet/leaflet.js" defer></script>
+  <script defer>
+    function bootMap() {
+      var el = document.getElementById("map");
+      if (!el) return;
+      if (typeof L === "undefined") { setTimeout(bootMap, 60); return; } // poczekaj na Leaflet (defer)
+
+      var mapStarted = false;
+      function initMap() {
+        if (mapStarted) return;
+        mapStarted = true;
+
+      var pulawy = [51.416, 21.969];
+
+      // Miejscowości zasięgu (bez opinii) - zielone kropki
+      var coverage = [
+        ["Lublin", 51.246, 22.568],
+        ["Dęblin", 51.573, 21.846],
+        ["Garwolin", 51.899, 21.618],
+        ["Opole Lubelskie", 51.146, 21.966],
+        ["Niedrzwica Duża", 51.121, 22.352],
+        ["Góra Puławska", 51.435, 21.900],
+        ["Zwoleń", 51.353, 21.588],
+        ["Bychawa", 51.016, 22.532],
+        ["Lipsko", 51.158, 21.646]
+      ];
+
+      // Prawdziwe opinie z Fixly, przypięte do miejscowości - najedź na złoty znacznik
+      // [nazwa, lat, lng, gwiazdki, treść, autor, usługa]
+      var reviews = [
+        ["Kazimierz Dolny", 51.320, 21.951, 5, "Usługa została wykonana błyskawicznie i z dużym profesjonalizmem. Zdecydowanie polecam!", "Piotr", "wycinka drzew"],
+        ["Karczmiska", 51.307, 22.006, 5, "Usługę wykonano szybko i bardzo fachowo. Z pewnością ponownie skorzystam z usług firmy.", "Zbigniew", "wycinka drzew"],
+        ["Poniatowa", 51.179, 22.066, 5, "Polecam. Bardzo szybka realizacja.", "Bartosz", "wynajem kontenerów"],
+        ["Nałęczów", 51.286, 22.216, 5, "Ok, polecam wszystkim.", "Przemysław", "usługi ogrodnicze"],
+        ["Garbatka-Letnisko", 51.520, 21.610, 5, "Polecam 👍", "Jarosław", "montaż ogrodzenia"],
+        ["Warszawa", 52.229, 21.012, 5, "Naprawdę firma godna polecenia. Płot ze sztachet wykonany bardzo dobrze. Polecam!", "Rafał", "montaż ogrodzenia"]
+      ];
+
+      var map = L.map(el, { scrollWheelZoom: false });
+      map.setView(pulawy, 8); // widok początkowy - wymagany zanim zrzutujemy okrąg/fitBounds
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+
+      // Okrąg zasięgu 150 km
+      var circle = L.circle(pulawy, {
+        radius: 150000,
+        color: "#2c7a45", weight: 2, fillColor: "#2c7a45", fillOpacity: 0.07
+      }).addTo(map);
+
+      function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+      function reviewHtml(name, stars, text, author, service) {
+        return '<div class="map-review">'
+          + '<span class="map-review__stars" aria-label="Ocena ' + stars + ' na 5">' + new Array(stars + 1).join("★") + '</span>'
+          + '<p>„' + esc(text) + '"</p>'
+          + '<cite>— ' + esc(author) + ', ' + esc(name) + ' · ' + esc(service) + '</cite>'
+          + '</div>';
+      }
+
+      // Panel z opinią pod mapą (nie ucina się na krawędzi mapy)
+      var panel = document.getElementById("map-review");
+      var panelHint = panel ? panel.innerHTML : "";
+      function showReview(html) { if (panel) { panel.innerHTML = html; panel.classList.add("is-active"); } }
+      function bindReview(marker, html) {
+        marker.on("mouseover", function () { showReview(html); });
+        marker.on("click", function () { showReview(html); });
+      }
+
+      // Indeks miejscowości (do klikalnych chipów)
+      var byTown = {};
+      function norm(s) { return String(s).trim().toLowerCase(); }
+
+      // Miejscowości zasięgu - zielone kropki (etykieta z nazwą na hover)
+      coverage.forEach(function (t) {
+        var m = L.circleMarker([t[1], t[2]], {
+          radius: 6, color: "#fff", weight: 2, fillColor: "#2c7a45", fillOpacity: 1
+        }).addTo(map)
+          .bindTooltip(t[0], { direction: "top", offset: [0, -6], className: "map-label" });
+        byTown[norm(t[0])] = { lat: t[1], lng: t[2], marker: m, review: null };
+      });
+
+      // Baza - Puławy (opinia Grzegorza w panelu)
+      var basePin = L.circleMarker(pulawy, {
+        radius: 11, color: "#fff", weight: 2, fillColor: "#c96a2b", fillOpacity: 1
+      }).addTo(map)
+        .bindTooltip("Puławy - nasza baza", { direction: "top", offset: [0, -10], className: "map-label" });
+      var pulawyReview = reviewHtml("Puławy - nasza baza", 5, "Rozsądne ceny. Dobra jakość.", "Grzegorz", "wycinka drzew");
+      bindReview(basePin, pulawyReview);
+      byTown[norm("Puławy")] = { lat: pulawy[0], lng: pulawy[1], marker: basePin, review: pulawyReview };
+
+      // Opinie - złote znaczniki; treść opinii pokazuje się w panelu pod mapą
+      reviews.forEach(function (r) {
+        var html = reviewHtml(r[0], r[3], r[4], r[5], r[6]);
+        var pin = L.circleMarker([r[1], r[2]], {
+          radius: 8, color: "#fff", weight: 2, fillColor: "#f4b400", fillOpacity: 1
+        }).addTo(map)
+          .bindTooltip(r[0], { direction: "top", offset: [0, -8], className: "map-label map-label--gold" });
+        bindReview(pin, html);
+        byTown[norm(r[0])] = { lat: r[1], lng: r[2], marker: pin, review: html };
+      });
+
+      // Klikalne miejscowości (chipy) -> przelot na mapie + opinia (jeśli jest)
+      var chips = document.querySelectorAll(".chips [data-town]");
+      chips.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var t = byTown[norm(btn.getAttribute("data-town"))];
+          if (!t) return;
+          chips.forEach(function (b) { b.classList.remove("is-active"); });
+          btn.classList.add("is-active");
+          map.flyTo([t.lat, t.lng], 11, { duration: 0.8 });
+          if (t.marker && t.marker.openTooltip) { t.marker.openTooltip(); }
+          if (t.review) {
+            showReview(t.review);
+          } else {
+            showReview('<div class="map-review"><p>Działamy w: <strong>' + esc(btn.textContent) +
+              '</strong> — dojazd z Puław w zasięgu 150 km.</p><cite>Zadzwoń po darmową wycenę: 694 757 680</cite></div>');
+          }
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+      });
+
+      map.fitBounds(circle.getBounds(), { padding: [20, 20] });
+      }
+
+      // Odłóż inicjalizację mapy poza krytyczny render (perf), ale zawsze ją załaduj.
+      if ("requestIdleCallback" in window) { requestIdleCallback(initMap, { timeout: 2000 }); }
+      else { setTimeout(initMap, 1200); }
+    }
+    if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", bootMap); } else { bootMap(); }
+  </script>
+</body>
+</html>

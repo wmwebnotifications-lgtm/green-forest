@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Przykład: ta sama działka po wycince i uprzątnięciu">
+  <defs>
+    <linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe3f5"/><stop offset="1" stop-color="#e8f3ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyA)"/>
+  <circle cx="1010" cy="130" r="60" fill="#ffe08a" opacity="0.9"/>
+  <!-- ziemia (zadbany trawnik) -->
+  <rect y="560" width="1200" height="240" fill="#7cb069"/>
+  <rect y="560" width="1200" height="18" fill="#92c67e"/>
+  <!-- dom (odsłonięty) -->
+  <g>
+    <rect x="770" y="380" width="300" height="200" fill="#efe8d9"/>
+    <polygon points="750,385 920,300 1090,385" fill="#b25c42"/>
+    <rect x="815" y="450" width="60" height="130" fill="#7a5a3a"/>
+    <rect x="960" y="440" width="70" height="60" fill="#b7dcf1"/>
+  </g>
+  <!-- po wycince: równo przycięty pień + uprzątnięty teren -->
+  <g>
+    <ellipse cx="323" cy="576" rx="46" ry="14" fill="#7a5733"/>
+    <ellipse cx="323" cy="568" rx="46" ry="14" fill="#9a7245"/>
+    <ellipse cx="323" cy="568" rx="30" ry="9" fill="#b98a55"/>
+    <ellipse cx="323" cy="568" rx="15" ry="4.5" fill="#a97c48"/>
+  </g>
+  <!-- kilka kęp trawy -->
+  <g fill="#4f8f45">
+    <path d="M180 560 l6 -22 l6 22 z"/><path d="M210 560 l5 -18 l5 18 z"/>
+    <path d="M470 560 l6 -20 l6 20 z"/><path d="M500 560 l5 -16 l5 16 z"/>
+  </g>
+  <!-- etykieta -->
+  <g>
+    <rect x="40" y="40" width="110" height="54" rx="27" fill="#1c4a2e" opacity="0.9"/>
+    <text x="95" y="76" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#fff" text-anchor="middle">PO</text>
+  </g>
+  <text x="600" y="770" font-family="Arial, sans-serif" font-size="22" fill="#16211a" opacity="0.35" text-anchor="middle">ZDJĘCIE POGLĄDOWE — demo</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Przykład: działka z dużym drzewem przed wycinką">
+  <defs>
+    <linearGradient id="skyB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe3f5"/><stop offset="1" stop-color="#e8f3ea"/>
+    </linearGradient>
+    <radialGradient id="canopy" cx="45%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#4f9d4f"/><stop offset="1" stop-color="#2f6f34"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#skyB)"/>
+  <circle cx="1010" cy="130" r="60" fill="#ffe08a" opacity="0.85"/>
+  <!-- ziemia -->
+  <rect y="560" width="1200" height="240" fill="#79a86a"/>
+  <rect y="560" width="1200" height="18" fill="#8bbd78"/>
+  <!-- dom -->
+  <g>
+    <rect x="770" y="380" width="300" height="200" fill="#e9e2d3"/>
+    <polygon points="750,385 920,300 1090,385" fill="#a5523a"/>
+    <rect x="815" y="450" width="60" height="130" fill="#7a5a3a"/>
+    <rect x="960" y="440" width="70" height="60" fill="#9fc6e0"/>
+  </g>
+  <!-- duże drzewo (PRZED) -->
+  <g>
+    <rect x="300" y="430" width="46" height="150" rx="10" fill="#6b4a2b"/>
+    <path d="M323 470 C 300 450, 285 430, 300 415" stroke="#6b4a2b" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <circle cx="323" cy="330" r="150" fill="url(#canopy)"/>
+    <circle cx="220" cy="360" r="95" fill="url(#canopy)"/>
+    <circle cx="430" cy="360" r="105" fill="url(#canopy)"/>
+    <circle cx="300" cy="250" r="95" fill="url(#canopy)"/>
+  </g>
+  <!-- etykieta -->
+  <g>
+    <rect x="40" y="40" width="150" height="54" rx="27" fill="#16211a" opacity="0.82"/>
+    <text x="115" y="76" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#fff" text-anchor="middle">PRZED</text>
+  </g>
+  <text x="600" y="770" font-family="Arial, sans-serif" font-size="22" fill="#16211a" opacity="0.35" text-anchor="middle">ZDJĘCIE POGLĄDOWE — demo</text>
+</svg>

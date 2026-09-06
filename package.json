@@ -1,0 +1,14 @@
+{
+  "name": "green-forest",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Strona wizytówka Green Forest — WM Web Solutions",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
