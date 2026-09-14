@@ -39,4 +39,13 @@ for (const match of sitemap.matchAll(/<loc>(.*?)<\/loc>/g)) {
   assert(fs.existsSync(path.join(root, new URL(match[1]).pathname, 'index.html')));
 }
 assert(fs.readFileSync(path.join(root,'robots.txt'),'utf8').includes(`Sitemap: ${origin}/sitemap.xml`));
+const wood = fs.readFileSync(path.join(root,'drewno-opalowe/index.html'),'utf8');
+const woodData = JSON.parse(wood.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+for (const q of woodData['@graph'].find(x => x['@type'] === 'FAQPage').mainEntity) {
+  assert(wood.includes(`<summary>${q.name}</summary><p>${q.acceptedAnswer.text}</p>`), 'Wood FAQ schema must match visible answers');
+}
+const css = fs.readFileSync(path.join(root,'styles.css'),'utf8');
+for (const match of css.matchAll(/url\(['"]?(\/[^)'"\s]+)['"]?\)/g)) {
+  assert(fs.existsSync(path.join(root,match[1])), `Missing CSS image: ${match[1]}`);
+}
 console.log(`OK: ${files.length} HTML pages, ${links} internal links/assets, ${schemas} JSON-LD blocks, sitemap and robots.txt`);
