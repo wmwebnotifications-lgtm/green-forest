@@ -136,9 +136,9 @@ p, li, blockquote { text-wrap: pretty; }
 .hero::before {
   content: ""; position: absolute; inset: 0; z-index: -2;
   background:
-    radial-gradient(120% 90% at 15% 0%, #2a5c3b 0%, transparent 55%),
-    radial-gradient(100% 80% at 100% 100%, rgba(201,106,43,.32) 0%, transparent 55%),
-    linear-gradient(165deg, var(--green-900) 0%, var(--green-800) 45%, #241b12 100%);
+    linear-gradient(rgba(8, 30, 18, .48), rgba(8, 30, 18, .65)),
+    url('/img/bg.jpg') center center / cover no-repeat;
+  background-color: var(--green-900);
 }
 /* subtelna faktura (grain) */
 .hero::after {
