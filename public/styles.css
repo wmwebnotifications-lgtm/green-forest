@@ -710,3 +710,8 @@ p, li, blockquote { text-wrap: pretty; }
 .trustbar { background: var(--green-050); border-bottom: 1px solid var(--line); }
 .trustbar__wrap { max-width: var(--maxw); margin: 0 auto; padding: .7rem clamp(1rem, 4vw, 2rem); display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.7rem; }
 .trustbar__item { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; font-size: .92rem; color: var(--green-800); text-align: center; }
+
+/* Nagłówek oferty lokalnej musi mieścić się również na tabletach. */
+.hero__title span { white-space: normal; }
+.calc__form, .calc__field { min-width: 0; }
+.calc__field select, .calc__field input { min-width: 0; max-width: 100%; }

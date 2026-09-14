@@ -52,6 +52,11 @@ Blog:
 
 Każda strona: meta + OG, schema (Service/Article + Breadcrumb + FAQ), linkowanie wewnętrzne, spójna nawigacja/stopka/FAB. Wpisane w `sitemap.xml`.
 
+Podstrony usług są dostępne z kart na stronie głównej i sekcji „Usługi” w stopce.
+Docelowa domena w canonical, Open Graph, danych strukturalnych, robots.txt i mapie witryny: `https://greenforest-pulawy.pl`.
+`npm run check:seo` sprawdza unikalne tytuły, H1, adresy canonical i OG, poprawność JSON-LD, lokalne linki i zasoby oraz mapę witryny.
+Strony wycinki, opału i karczowania zawierają informacje potrzebne do zamówienia lub wyceny; ceny pozostają w jednym cenniku.
+
 ## Uruchomienie na nowym komputerze
 
 Minimum, by tylko zobaczyć stronę: **Git** + **Node.js**.
@@ -127,4 +132,4 @@ Darmowy plan Web3Forms: 250 zgłoszeń/mies. (z zapasem). Ochrona: honeypot + po
 - [ ] NIP / dane rejestrowe do stopki (placeholder `000-000-00-00`)
 - [ ] Godziny pracy (w schema wpisane orientacyjnie Mo-Sa 07:00-19:00)
 - [ ] Google Business Profile (pod SEO lokalne)
-- [ ] Domena docelowa (aktualizacja `canonical`, `sitemap.xml`, `robots.txt`, schema `url`)
+- [x] Domena docelowa: greenforest-pulawy.pl (`canonical`, `sitemap.xml`, `robots.txt`, schema `url`)
