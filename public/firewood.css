@@ -1,0 +1,35 @@
+/* Oferta drewna i galeria zdjęć. */
+.firewood { max-width: var(--maxw); margin: 0 auto; padding: 3rem clamp(1rem, 4vw, 2rem); }
+.firewood__inner { padding: clamp(1.25rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
+.firewood__eyebrow { margin: 0 0 .8rem; color: var(--green-500); font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.firewood h2 { margin: 0 0 1.5rem; max-width: 620px; color: var(--green-800); font-size: var(--h2); line-height: 1.15; }
+.firewood__layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+.firewood__copy p { margin: 0 0 1rem; color: var(--muted); }
+.firewood__copy strong { color: var(--green-800); }
+.firewood__actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.firewood__delivery { padding: 1.5rem; border-radius: var(--radius); background: var(--green-800); color: #fff; }
+.firewood__delivery-label { margin: 0; color: #d4e8d7; font-size: .8rem; }
+.firewood__delivery h3 { margin: 1rem 0 .75rem; color: #fff; font-size: clamp(1.4rem, 1.15rem + 1vw, 1.8rem); line-height: 1.2; }
+.firewood__delivery-note { margin: 0; color: #d4e8d7; font-size: .85rem; }
+.firewood__phone { display: block; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #617468; color: #fff; font-size: 1.2rem; text-decoration: none; }
+.firewood__phone span { display: block; color: #d4e8d7; font-size: .8rem; }
+.firewood__gallery { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.firewood__gallery h3 { margin: 0 0 .4rem; color: var(--green-800); font-size: 1.35rem; }
+.firewood__gallery-note { margin: 0 0 1rem; color: var(--muted); font-size: .85rem; }
+.firewood__photos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; max-width: 720px; }
+.firewood__photo { position: relative; display: block; aspect-ratio: 1; overflow: hidden; border-radius: 12px; background: var(--sand); cursor: zoom-in; }
+.firewood__photo img { width: 100%; height: 100%; object-fit: cover; }
+.firewood__zoom { position: absolute; right: 8px; bottom: 8px; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: #fff; background: var(--green-800); }
+.firewood__zoom svg { width: 18px; height: 18px; }
+.firewood__photo:hover { box-shadow: 0 0 0 3px var(--green-300); }
+.firewood__photo:focus-visible, .firewood__close:focus-visible, .firewood__phone:focus-visible { outline: 3px solid var(--green-400); outline-offset: 4px; }
+.firewood-lightbox { width: calc(100% - 24px); max-width: 820px; max-height: calc(100dvh - 24px); padding: 12px; margin: auto; color: #fff; background: var(--green-900); border: 0; border-radius: var(--radius); }
+.firewood-lightbox::backdrop { background: rgba(5, 15, 9, .86); }
+.firewood-lightbox[open] { display: grid; gap: 10px; }
+.firewood-lightbox__head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.firewood-lightbox__caption { margin: 0; padding-left: 4px; font-size: .85rem; line-height: 1.4; }
+.firewood__close { flex-shrink: 0; min-height: 44px; padding: .6rem .85rem; border: 1px solid #617468; border-radius: 24px; color: #fff; background: var(--green-800); cursor: pointer; font: inherit; font-size: .85rem; }
+.firewood-lightbox__image { width: 100%; max-height: 72vh; max-height: calc(100dvh - 130px); object-fit: contain; border-radius: 8px; }
+html.firewood-lightbox-open { overflow: hidden; }
+@media (max-width: 700px) { .firewood__layout { grid-template-columns: 1fr; gap: 1.5rem; } }
+@media (max-width: 520px) { .firewood__photos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

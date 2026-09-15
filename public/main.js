@@ -133,7 +133,7 @@ document.querySelectorAll("form.contact-form").forEach(function (form) {
       price = Math.max(300, 0.6 * num("calc-m2", 300));
     } else if (s === "drewno") {
       price = 330 * num("calc-mp", 3);
-      note = "Cena drewna zależy od gatunku i wysuszenia - patrz cennik. Dowóz wyceniamy osobno.";
+      note = "Cena drewna zależy od gatunku i wysuszenia - patrz cennik. Transport gratis do 15 km od Puław. Dalszy dowóz wyceniamy osobno.";
     }
     if (urgent && s !== "drewno") price *= 1.3;
     if (!price) { priceEl.textContent = "—"; return; }
