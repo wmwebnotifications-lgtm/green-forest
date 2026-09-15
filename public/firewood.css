@@ -2,19 +2,19 @@
 .firewood { max-width: var(--maxw); margin: 0 auto; padding: 3rem clamp(1rem, 4vw, 2rem); }
 .firewood__inner { padding: clamp(1.25rem, 3vw, 2rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
 .firewood__eyebrow { margin: 0 0 .8rem; color: var(--green-500); font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
-.firewood h2 { margin: 0 0 1.5rem; max-width: 620px; color: var(--green-800); font-size: var(--h2); line-height: 1.15; }
+.firewood #firewood-heading { margin: 0 0 1.5rem; max-width: 620px; color: var(--green-800); font-size: var(--h2); line-height: 1.15; }
 .firewood__layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
 .firewood__copy p { margin: 0 0 1rem; color: var(--muted); }
 .firewood__copy strong { color: var(--green-800); }
 .firewood__actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
 .firewood__delivery { padding: 1.5rem; border-radius: var(--radius); background: var(--green-800); color: #fff; }
 .firewood__delivery-label { margin: 0; color: #d4e8d7; font-size: .8rem; }
-.firewood__delivery h3 { margin: 1rem 0 .75rem; color: #fff; font-size: clamp(1.4rem, 1.15rem + 1vw, 1.8rem); line-height: 1.2; }
+.firewood__delivery :is(h2, h3) { margin: 1rem 0 .75rem; color: #fff; font-size: clamp(1.4rem, 1.15rem + 1vw, 1.8rem); line-height: 1.2; }
 .firewood__delivery-note { margin: 0; color: #d4e8d7; font-size: .85rem; }
 .firewood__phone { display: block; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid #617468; color: #fff; font-size: 1.2rem; text-decoration: none; }
 .firewood__phone span { display: block; color: #d4e8d7; font-size: .8rem; }
 .firewood__gallery { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
-.firewood__gallery h3 { margin: 0 0 .4rem; color: var(--green-800); font-size: 1.35rem; }
+.firewood__gallery :is(h2, h3) { margin: 0 0 .4rem; color: var(--green-800); font-size: 1.35rem; }
 .firewood__gallery-note { margin: 0 0 1rem; color: var(--muted); font-size: .85rem; }
 .firewood__photos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; max-width: 720px; }
 .firewood__photo { position: relative; display: block; aspect-ratio: 1; overflow: hidden; border-radius: 12px; background: var(--sand); cursor: zoom-in; }
