@@ -59,7 +59,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 
 h1, h2, h3 {
@@ -325,9 +325,10 @@ p, li, blockquote { text-wrap: pretty; }
 @media (prefers-reduced-motion: reduce) { .fab { animation: none; } }
 
 /* ============ Reveal (dostępny) ============ */
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal { opacity: 1; transform: none; transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal.will-reveal { opacity: 0; transform: translateY(26px); }
 .reveal.is-visible { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+@media (prefers-reduced-motion: reduce) { .reveal, .reveal.will-reveal { opacity: 1; transform: none; transition: none; } }
 
 /* ============ Podstrony: breadcrumb, nagłówek, treść ============ */
 .breadcrumb { max-width: var(--maxw); margin: 0 auto; padding: 1.4rem clamp(1rem,4vw,2rem) 0; font-size: .9rem; color: var(--muted); }
@@ -554,13 +555,14 @@ p, li, blockquote { text-wrap: pretty; }
   #realizacje > .reels { display: none; }
   #realizacje > .realizacje-images { order: 2; }
   #realizacje > .reels__more { order: 3; margin-top: 1rem; }
-  #kontakt .section__title { font-size: clamp(1.35rem, 5.8vw, 2rem); white-space: nowrap; }
+  #kontakt .section__title { font-size: clamp(1.35rem, 5.8vw, 2rem); white-space: normal; }
 }
 
 /* =====================================================================
    Formularz kontaktowy
    ===================================================================== */
 .contact-block { display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: start; }
+.contact-block > *, .contact-form, .field { min-width: 0; }
 @media (max-width: 860px) { .contact-block { grid-template-columns: 1fr; gap: 2rem; } }
 .contact-info h3 { font-family: var(--font-display); color: var(--green-800); margin: 0 0 1rem; font-size: 1.6rem; }
 .contact-info .eyebrow { color: var(--green-500); text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 600; margin: 1.4rem 0 .4rem; }

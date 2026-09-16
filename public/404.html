@@ -18,11 +18,12 @@
     .e404 p { color: var(--muted); max-width: 44ch; margin: 0 auto 1.6rem; }
     .e404 .links { display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; }
   </style>
+  <link rel="stylesheet" href="/analytics.css" />
 </head>
 <body>
   <div class="e404">
     <div>
-      <img src="/assets/logo-header-green.svg" alt="Green Forest" />
+      <img src="/assets/logo-header-green.svg" alt="Green Forest" width="1312" height="1199" />
       <p class="code">404</p>
       <h1>Nie znaleziono strony</h1>
       <p>Ups! Ta strona nie istnieje albo została przeniesiona. Wróć na stronę główną albo napisz do nas - chętnie pomożemy.</p>
@@ -33,5 +34,14 @@
       </div>
     </div>
   </div>
+<button type="button" class="analytics-settings" data-analytics-settings hidden>Ustawienia prywatności</button>
+
+  <section class="analytics-consent" id="analytics-consent" aria-labelledby="analytics-heading" hidden>
+    <h2 id="analytics-heading">Czy możemy mierzyć odwiedziny?</h2>
+    <p>Za Twoją zgodą Google Analytics zapisze pliki cookie i pomoże nam sprawdzić, które strony odwiedzasz oraz czy korzystasz z kontaktu. Odmowa nie ogranicza działania strony. Decyzję zmienisz w stopce.</p>
+    <p><a href="/polityka-prywatnosci/#statystyki">Szczegóły prywatności</a> · <span id="analytics-status"></span></p>
+    <div class="analytics-consent__actions"><button class="btn" type="button" data-analytics-reject>Odrzuć statystyki</button><button class="btn" type="button" data-analytics-accept>Zezwól na statystyki</button></div>
+  </section>
+  <script src="/analytics.js" defer></script>
 </body>
 </html>

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://greenforest-pulawy.pl/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/wycinka-drzew/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/drewno-opalowe/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/pielegnacja-zieleni/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/tereny-zielone/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/drewno-tartaczne/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/wycinka-drzew-lublin/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/cennik/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/kontakt/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/blog/</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/blog/ile-kosztuje-wycinka-drzewa/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/blog/pozwolenie-na-wycinke-drzew/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/blog/jakie-drewno-na-opal/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://greenforest-pulawy.pl/blog/kiedy-przycinac-drzewa-zywoploty/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://greenforest-pulawy.pl/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/wycinka-drzew/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/drewno-opalowe/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/pielegnacja-zieleni/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/tereny-zielone/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/drewno-tartaczne/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/wycinka-drzew-lublin/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/cennik/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/kontakt/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/blog/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/blog/ile-kosztuje-wycinka-drzewa/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/blog/pozwolenie-na-wycinke-drzew/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/blog/jakie-drewno-na-opal/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/blog/kiedy-przycinac-drzewa-zywoploty/</loc></url>
+  <url><loc>https://greenforest-pulawy.pl/obszar-dzialania/</loc></url>
 </urlset>

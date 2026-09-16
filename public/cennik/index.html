@@ -10,10 +10,9 @@
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="geo.region" content="PL-LU" />
   <meta name="geo.placename" content="Puławy" />
-  <meta name="keywords" content="cennik drewna opałowego Puławy, cena drewna na opał, cennik wycinki drzew, ile kosztuje wycinka drzewa, cena zrębkowania, drewno opałowe cena mp" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Cennik - drewno opałowe i usługi | Green Forest Puławy" />
-  <meta property="og:description" content="Orientacyjne ceny drewna opałowego i usług arborystycznych. Puławy i okolice, dojazd do 150 km. Darmowa wycena." />
+  <meta property="og:description" content="Cennik Green Forest - ceny drewna opałowego oraz usług: wycinka drzew, zrębkowanie, karczowanie, koszenie. Puławy i okolice. Darmowa wycena: 694 757 680." />
   <meta property="og:image" content="https://greenforest-pulawy.pl/img/og-image.jpg" />
   <meta property="og:locale" content="pl_PL" />
   <link rel="icon" href="/assets/favicon.png" type="image/png" />
@@ -22,20 +21,34 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="/styles.css" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      { "@type": "BreadcrumbList", "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Green Forest", "item": "https://greenforest-pulawy.pl/" },
-        { "@type": "ListItem", "position": 2, "name": "Cennik", "item": "https://greenforest-pulawy.pl/cennik/" }
-      ] }
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Green Forest",
+          "item": "https://greenforest-pulawy.pl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cennik",
+          "item": "https://greenforest-pulawy.pl/cennik/"
+        }
+      ]
+    }
+  ]
+}
   </script>
+  <link rel="stylesheet" href="/analytics.css" />
 </head>
 <body>
   <header class="nav" id="top">
-    <a class="nav__logo" href="/"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest — wycinka drzew i drewno opałowe, Puławy" /></a>
+    <a class="nav__logo" href="/"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest — wycinka drzew i drewno opałowe, Puławy" width="1312" height="1199" /></a>
     <nav class="nav__links" aria-label="Główna">
       <a href="/">Start</a>
       <a href="/#o-nas">O nas</a>
@@ -55,7 +68,7 @@
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <div class="mobile-menu__top">
-      <span class="nav__logo"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest" /></span>
+      <span class="nav__logo"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest" width="1312" height="1199" /></span>
       <button class="mobile-menu__close" aria-label="Zamknij">&times;</button>
     </div>
     <a href="/">Start</a>
@@ -179,6 +192,7 @@
         <li><a href="tel:+48694757680">📞 694 757 680</a></li>
         <li><a href="mailto:green.forest33@op.pl">✉️ green.forest33@op.pl</a></li>
         <li>Puławy, woj. lubelskie</li>
+        <li><a href="/obszar-dzialania/">Obszar działania i dojazd</a></li>
       </ul>
     </div>
   </div>
@@ -186,6 +200,7 @@
     <span>© <span id="year"></span> Green Forest · dojazd do 150 km · <a href="/polityka-prywatnosci/">Polityka prywatności</a></span>
     <span>Zamów swoją stronę na: <a href="https://wm-websolutions.pl" rel="noopener">WM Web Solutions</a></span>
   </div>
+  <div class="footer__bottom"><button type="button" class="analytics-settings" data-analytics-settings hidden>Ustawienia prywatności</button></div>
 </footer>
   <div class="fab-group">
     <a class="fab fab--wa" href="https://wa.me/48694757680?text=Dzie%C5%84%20dobry%2C%20pisz%C4%99%20ze%20strony%20Green%20Forest%20w%20sprawie%20wyceny." target="_blank" rel="noopener" aria-label="Napisz na WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M19.11 17.21c-.29-.15-1.72-.85-1.99-.94-.27-.1-.46-.15-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.57-.89-2.15-.24-.56-.48-.49-.65-.5-.17-.01-.36-.01-.55-.01-.19 0-.51.07-.77.36-.27.29-1.01.99-1.01 2.41 0 1.42 1.04 2.8 1.18 2.99.15.19 2.05 3.13 4.96 4.39.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z M16 3.2C8.94 3.2 3.2 8.94 3.2 16c0 2.26.59 4.47 1.72 6.42L3.2 28.8l6.56-1.72c1.88 1.03 4 1.57 6.24 1.57 7.06 0 12.8-5.74 12.8-12.8S23.06 3.2 16 3.2zm0 23.4c-2 0-3.96-.54-5.66-1.55l-.41-.24-3.89 1.02 1.04-3.79-.27-.42c-1.11-1.77-1.7-3.81-1.7-5.92C5.42 10.06 10.14 5.34 16 5.34S26.58 10.06 26.58 16 21.86 26.6 16 26.6z"/></svg></a>
@@ -193,5 +208,13 @@
   </div>
 
   <script src="/main.js" defer></script>
+
+  <section class="analytics-consent" id="analytics-consent" aria-labelledby="analytics-heading" hidden>
+    <h2 id="analytics-heading">Czy możemy mierzyć odwiedziny?</h2>
+    <p>Za Twoją zgodą Google Analytics zapisze pliki cookie i pomoże nam sprawdzić, które strony odwiedzasz oraz czy korzystasz z kontaktu. Odmowa nie ogranicza działania strony. Decyzję zmienisz w stopce.</p>
+    <p><a href="/polityka-prywatnosci/#statystyki">Szczegóły prywatności</a> · <span id="analytics-status"></span></p>
+    <div class="analytics-consent__actions"><button class="btn" type="button" data-analytics-reject>Odrzuć statystyki</button><button class="btn" type="button" data-analytics-accept>Zezwól na statystyki</button></div>
+  </section>
+  <script src="/analytics.js" defer></script>
 </body>
 </html>

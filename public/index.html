@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ==== SEO (do uzupełnienia: domena docelowa) ==== -->
+  <!-- SEO: domena kanoniczna bez www -->
   <title>Green Forest Puławy – wycinka drzew i drewno opałowe</title>
   <meta name="description" content="Wycinka trudnych drzew, karczowanie działek i drewno opałowe w Puławach i okolicy. Darmowa wycena, praca na linach i uprzątnięcie terenu. Sprawdź ofertę." />
   <link rel="canonical" href="https://greenforest-pulawy.pl/" />
@@ -12,7 +12,6 @@
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="geo.region" content="PL-LU" />
   <meta name="geo.placename" content="Puławy" />
-  <meta name="keywords" content="wycinka drzew Puławy, arborysta Puławy, wycinka drzew trudnych, wycinka systemem linowym, drewno opałowe Puławy, zagospodarowanie terenów zielonych, karczowanie działek, przycinanie żywopłotów, zrębkowanie gałęzi, drewno tartaczne" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -32,40 +31,91 @@
 
   <!-- ==== Dane strukturalne: LocalBusiness ==== -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Green Forest",
-    "description": "Wycinka drzew trudnych systemem linowym, arborystyka, zagospodarowanie terenów zielonych, koszenie i karczowanie, sprzedaż drewna opałowego i tartacznego.",
-    "url": "https://greenforest-pulawy.pl/",
-    "telephone": "+48 694 757 680",
-    "email": "green.forest33@op.pl",
-    "image": "https://greenforest-pulawy.pl/img/og-image.jpg",
-    "areaServed": [
-      { "@type": "City", "name": "Puławy" },
-      { "@type": "City", "name": "Lublin" },
-      { "@type": "City", "name": "Dęblin" },
-      { "@type": "City", "name": "Garwolin" },
-      { "@type": "City", "name": "Opole Lubelskie" },
-      { "@type": "City", "name": "Niedrzwica Duża" },
-      { "@type": "City", "name": "Góra Puławska" },
-      { "@type": "City", "name": "Zwoleń" },
-      { "@type": "City", "name": "Bychawa" },
-      { "@type": "City", "name": "Lipsko" }
-    ],
-    "address": { "@type": "PostalAddress", "addressLocality": "Puławy", "addressRegion": "lubelskie", "addressCountry": "PL" },
-    "priceRange": "$$",
-    "openingHours": "Mo-Sa 07:00-19:00",
-    "sameAs": ["https://www.facebook.com/profile.php?id=61585028168766"]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Green Forest",
+  "description": "Wycinka drzew trudnych systemem linowym, arborystyka, zagospodarowanie terenów zielonych, koszenie i karczowanie, sprzedaż drewna opałowego i tartacznego.",
+  "url": "https://greenforest-pulawy.pl/",
+  "telephone": "+48 694 757 680",
+  "email": "green.forest33@op.pl",
+  "image": "https://greenforest-pulawy.pl/img/og-image.jpg",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Puławy"
+    },
+    {
+      "@type": "City",
+      "name": "Lublin"
+    },
+    {
+      "@type": "City",
+      "name": "Dęblin"
+    },
+    {
+      "@type": "City",
+      "name": "Garwolin"
+    },
+    {
+      "@type": "City",
+      "name": "Opole Lubelskie"
+    },
+    {
+      "@type": "Place",
+      "name": "Niedrzwica Duża"
+    },
+    {
+      "@type": "Place",
+      "name": "Góra Puławska"
+    },
+    {
+      "@type": "City",
+      "name": "Zwoleń"
+    },
+    {
+      "@type": "City",
+      "name": "Bychawa"
+    },
+    {
+      "@type": "City",
+      "name": "Lipsko"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Puławy",
+    "addressRegion": "lubelskie",
+    "addressCountry": "PL"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61585028168766"
+  ],
+  "@id": "https://greenforest-pulawy.pl/#business",
+  "logo": "https://greenforest-pulawy.pl/assets/logo-header-green.svg"
+}
   </script>
   <link rel="preload" as="image" href="/img/bg.jpg" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://greenforest-pulawy.pl/#website","url":"https://greenforest-pulawy.pl/","name":"Green Forest","alternateName":"Green Forest Puławy","inLanguage":"pl-PL"}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://greenforest-pulawy.pl/#website",
+  "url": "https://greenforest-pulawy.pl/",
+  "name": "Green Forest",
+  "alternateName": "Green Forest Puławy",
+  "inLanguage": "pl-PL",
+  "publisher": {
+    "@id": "https://greenforest-pulawy.pl/#business"
+  }
+}
+  </script>
+  <link rel="stylesheet" href="/analytics.css" />
 </head>
 <body>
   <!-- ==== Nawigacja ==== -->
   <header class="nav" id="top">
-    <a class="nav__logo" href="/"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest — wycinka drzew i drewno opałowe, Puławy" /></a>
+    <a class="nav__logo" href="/"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest — wycinka drzew i drewno opałowe, Puławy" width="1312" height="1199" /></a>
     <nav class="nav__links" aria-label="Główna">
       <a href="/">Start</a>
       <a href="/#o-nas">O nas</a>
@@ -85,7 +135,7 @@
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <div class="mobile-menu__top">
-      <span class="nav__logo"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest" /></span>
+      <span class="nav__logo"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest" width="1312" height="1199" /></span>
       <button class="mobile-menu__close" aria-label="Zamknij">&times;</button>
     </div>
     <a href="/">Start</a>
@@ -106,7 +156,7 @@
   <!-- ==== Hero ==== -->
   <section class="hero">
     <div class="hero__inner">
-      <img class="hero__logo" src="/img/logo-greenforest.svg" alt="Green Forest" />
+      <img class="hero__logo" src="/img/logo-greenforest.svg" alt="Green Forest" width="1312" height="1199" />
       <p class="hero__eyebrow">Puławy i okolice · dojazd do 150 km</p>
       <div class="hero__winter"><span>Nadchodzi zima!</span><a href="/cennik/#drewno">Sprzedajemy drewno na opał</a></div>
       <h1 class="hero__title"><span>Wycinka drzew i pielęgnacja zieleni</span><span>w Puławach i okolicy</span></h1>
@@ -269,7 +319,7 @@
       </ul>
     </div>
     <div class="media-placeholder reveal">
-      <img src="/assets/broszura-onas.svg" alt="Broszura Green Forest o firmie" />
+      <img src="/assets/broszura-onas.svg" alt="Broszura Green Forest o firmie" width="1000" height="1000" loading="lazy" decoding="async" />
     </div>
   </section>
 
@@ -282,6 +332,7 @@
       <li><button type="button" class="chip" data-town="Puławy">Puławy</button></li><li><button type="button" class="chip" data-town="Lublin">Lublin</button></li><li><button type="button" class="chip" data-town="Dęblin">Dęblin</button></li><li><button type="button" class="chip" data-town="Garwolin">Garwolin</button></li><li><button type="button" class="chip" data-town="Opole Lubelskie">Opole Lubelskie</button></li>
       <li><button type="button" class="chip" data-town="Niedrzwica Duża">Niedrzwica Duża</button></li><li><button type="button" class="chip" data-town="Góra Puławska">Góra Puławska</button></li><li><button type="button" class="chip" data-town="Zwoleń">Zwoleń</button></li><li><button type="button" class="chip" data-town="Bychawa">Bychawa</button></li><li><button type="button" class="chip" data-town="Lipsko">Lipsko</button></li>
     </ul>
+    <p class="area-link"><a href="/obszar-dzialania/">Sprawdź obszar działania i warunki dojazdu →</a></p>
     <div id="map" role="img" aria-label="Mapa obszaru działania Green Forest: Puławy i okolice w promieniu do 150 km"></div>
     <div id="map-review" class="map-reviewbox" aria-live="polite">
       <span class="map-reviewbox__hint">👆 Najedź na złoty znacznik, aby zobaczyć opinię klienta z danej miejscowości.</span>
@@ -351,19 +402,19 @@
     <p class="section__lead reveal">Nagrania prosto z naszego profilu - zobacz kawałek naszej codziennej pracy.</p>
     <div class="reels">
       <div class="reels__item reveal">
-        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F782269448275235%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="eager" title="Green Forest - realizacja 1 (wideo z Facebooka)"></iframe>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F782269448275235%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Green Forest - realizacja 1 (wideo z Facebooka)"></iframe>
         <a class="reels__fallback" href="https://www.facebook.com/reel/782269448275235/" target="_blank" rel="noopener">Otwórz rolkę na Facebooku</a>
       </div>
       <div class="reels__item reveal">
-        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2071828056723656%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="eager" title="Green Forest - realizacja 2 (wideo z Facebooka)"></iframe>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2071828056723656%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Green Forest - realizacja 2 (wideo z Facebooka)"></iframe>
         <a class="reels__fallback" href="https://www.facebook.com/reel/2071828056723656/" target="_blank" rel="noopener">Otwórz rolkę na Facebooku</a>
       </div>
       <div class="reels__item reveal">
-        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F960587363664989%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="eager" title="Green Forest - realizacja 3 (wideo z Facebooka)"></iframe>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F960587363664989%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Green Forest - realizacja 3 (wideo z Facebooka)"></iframe>
         <a class="reels__fallback" href="https://www.facebook.com/reel/960587363664989/" target="_blank" rel="noopener">Otwórz rolkę na Facebooku</a>
       </div>
       <div class="reels__item reveal">
-        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2078149859794496%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="eager" title="Green Forest - realizacja 4 (wideo z Facebooka)"></iframe>
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2078149859794496%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy" title="Green Forest - realizacja 4 (wideo z Facebooka)"></iframe>
         <a class="reels__fallback" href="https://www.facebook.com/reel/2078149859794496/" target="_blank" rel="noopener">Otwórz rolkę na Facebooku</a>
       </div>
       <!-- Aby DODAĆ kolejną rolkę: skopiuj jeden blok <div class="reels__item">...</div>
@@ -372,14 +423,14 @@
     </div>
     <p class="reels__more reveal"><a class="btn btn--ghost" href="https://www.facebook.com/profile.php?id=61585028168766" target="_blank" rel="noopener">Zobacz więcej na Facebooku</a></p>
     <div class="realizacje-images reveal">
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-1.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-1.svg" alt="Green Forest - wycinka drzew" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-drewno-2.svg" data-lightbox-alt="Green Forest - drewno opałowe"><img src="/assets/green-forest-drewno-2.svg" alt="Green Forest - drewno opałowe" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-karczowanie-7.svg" data-lightbox-alt="Green Forest - karczowanie"><img src="/assets/green-forest-karczowanie-7.svg" alt="Green Forest - karczowanie" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-prace-w-terenie-8.svg" data-lightbox-alt="Green Forest - prace w terenie"><img src="/assets/green-forest-prace-w-terenie-8.svg" alt="Green Forest - prace w terenie" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-rebak-4.svg" data-lightbox-alt="Green Forest - rębakowanie gałęzi"><img src="/assets/green-forest-rebak-4.svg" alt="Green Forest - rębakowanie gałęzi" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-3.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-3.svg" alt="Green Forest - wycinka drzew" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-5.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-5.svg" alt="Green Forest - wycinka drzew" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-6.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-6.svg" alt="Green Forest - wycinka drzew" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-1.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-1.svg" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-drewno-2.svg" data-lightbox-alt="Green Forest - drewno opałowe"><img src="/assets/green-forest-drewno-2.svg" alt="Green Forest - drewno opałowe" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-karczowanie-7.svg" data-lightbox-alt="Green Forest - karczowanie"><img src="/assets/green-forest-karczowanie-7.svg" alt="Green Forest - karczowanie" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-prace-w-terenie-8.svg" data-lightbox-alt="Green Forest - prace w terenie"><img src="/assets/green-forest-prace-w-terenie-8.svg" alt="Green Forest - prace w terenie" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-rebak-4.svg" data-lightbox-alt="Green Forest - rębakowanie gałęzi"><img src="/assets/green-forest-rebak-4.svg" alt="Green Forest - rębakowanie gałęzi" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-3.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-3.svg" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-5.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-5.svg" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-6.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-6.svg" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
     </div>
     <div class="lightbox" id="realizacje-lightbox" aria-hidden="true">
       <button type="button" class="lightbox__close" aria-label="Zamknij podgląd">&times;</button>
@@ -394,8 +445,8 @@
     <h2 class="section__title reveal">Zobacz różnicę: przed i po</h2>
     <p class="section__lead reveal">Przeciągnij suwak, aby porównać teren przed naszą pracą i po niej. <span class="small-note">(grafiki poglądowe - wkrótce zastąpimy je zdjęciami realizacji)</span></p>
     <div class="ba reveal" id="ba">
-      <div class="ba__img ba__img--after"><img src="/img/demo/po.svg" alt="Działka po wycince i uprzątnięciu terenu" /></div>
-      <div class="ba__img ba__img--before" id="ba-before"><img src="/img/demo/przed.svg" alt="Działka z drzewem przed wycinką" /></div>
+      <div class="ba__img ba__img--after"><img src="/img/demo/po.svg" alt="Działka po wycince i uprzątnięciu terenu" width="1200" height="800" /></div>
+      <div class="ba__img ba__img--before" id="ba-before"><img src="/img/demo/przed.svg" alt="Działka z drzewem przed wycinką" width="1200" height="800" /></div>
       <input class="ba__range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Suwak porównania przed/po" />
       <div class="ba__handle" id="ba-handle" aria-hidden="true"><span>‹ ›</span></div>
     </div>
@@ -546,6 +597,7 @@
         <li><a href="tel:+48694757680">📞 694 757 680</a></li>
         <li><a href="mailto:green.forest33@op.pl">✉️ green.forest33@op.pl</a></li>
         <li>Puławy, woj. lubelskie</li>
+        <li><a href="/obszar-dzialania/">Obszar działania i dojazd</a></li>
       </ul>
     </div>
   </div>
@@ -553,6 +605,7 @@
     <span>© <span id="year"></span> Green Forest · dojazd do 150 km · <a href="/polityka-prywatnosci/">Polityka prywatności</a></span>
     <span>Zamów swoją stronę na: <a href="https://wm-websolutions.pl" rel="noopener">WM Web Solutions</a></span>
   </div>
+  <div class="footer__bottom"><button type="button" class="analytics-settings" data-analytics-settings hidden>Ustawienia prywatności</button></div>
 </footer>
 
   <div class="fab-group">
@@ -695,5 +748,13 @@
     }
     if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", bootMap); } else { bootMap(); }
   </script>
+
+  <section class="analytics-consent" id="analytics-consent" aria-labelledby="analytics-heading" hidden>
+    <h2 id="analytics-heading">Czy możemy mierzyć odwiedziny?</h2>
+    <p>Za Twoją zgodą Google Analytics zapisze pliki cookie i pomoże nam sprawdzić, które strony odwiedzasz oraz czy korzystasz z kontaktu. Odmowa nie ogranicza działania strony. Decyzję zmienisz w stopce.</p>
+    <p><a href="/polityka-prywatnosci/#statystyki">Szczegóły prywatności</a> · <span id="analytics-status"></span></p>
+    <div class="analytics-consent__actions"><button class="btn" type="button" data-analytics-reject>Odrzuć statystyki</button><button class="btn" type="button" data-analytics-accept>Zezwól na statystyki</button></div>
+  </section>
+  <script src="/analytics.js" defer></script>
 </body>
 </html>

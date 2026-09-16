@@ -83,6 +83,7 @@ document.querySelectorAll("form.contact-form").forEach(function (form) {
       .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
       .then(function (res) {
         if (res.ok && res.d.success) {
+          document.dispatchEvent(new Event('greenforest:lead-sent'));
           form.reset();
           setStatus("Dziękujemy! Wiadomość wysłana — odezwiemy się wkrótce.", true);
         } else {
@@ -189,7 +190,7 @@ if (!reduceMotion && "IntersectionObserver" in window) {
     },
     { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
   );
-  reveals.forEach(function (el) { io.observe(el); });
+  reveals.forEach(function (el) { el.classList.add('will-reveal'); io.observe(el); });
 } else {
   reveals.forEach(function (el) { el.classList.add("is-visible"); });
 }

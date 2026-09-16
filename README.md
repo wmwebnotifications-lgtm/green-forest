@@ -42,6 +42,7 @@ Usługi:
 - `/tereny-zielone/` — karczowanie i zagospodarowanie terenów
 - `/drewno-tartaczne/` — skup/sprzedaż drewna tartacznego + zrębkowanie
 - `/wycinka-drzew-lublin/` — geo-landing (Lublin)
+- `/obszar-dzialania/` — obszar usług, warunki dojazdu i dowozu drewna
 
 Blog:
 - `/blog/` — lista wpisów
@@ -57,6 +58,16 @@ Docelowa domena w canonical, Open Graph, danych strukturalnych, robots.txt i map
 `npm run check:seo` sprawdza unikalne tytuły, H1, adresy canonical i OG, poprawność JSON-LD, lokalne linki i zasoby oraz mapę witryny.
 Strony wycinki, opału i karczowania zawierają informacje potrzebne do zamówienia lub wyceny; ceny pozostają w jednym cenniku.
 
+## SEO i pomiar
+
+Plan fraz, reguły indeksowania, stan integracji z Google i procedura comiesięcznej analizy: [docs/seo-plan.md](docs/seo-plan.md).
+Wyniki audytu wdrożenia: [docs/seo-audit-2026-09-16.md](docs/seo-audit-2026-09-16.md).
+
+`npm run check:seo` wykonuje 17 kontroli technicznych i redakcyjnych, a `npm test` sprawdza przekierowania oraz zgodę na GA4. Kontrole uruchamiają się też w GitHub Actions.
+GA4 `G-6GWRFWXP2H` działa po zgodzie tylko na domenie produkcyjnej. Przed zgodą Google tag nie jest ładowany. Cofnięcie zgody jest dostępne w stopce. Formularz emituje zdarzenie `generate_lead` po potwierdzonym wysłaniu; kliknięcia telefonu, e-maila i WhatsAppa emitują `contact_click`.
+
+Cloudflare uruchamia `src/worker.mjs` przed zasobami, żeby obsłużyć HTTPS i stałe przekierowania adresów. Lokalny `node server.js` służy do podglądu wyglądu; routing produkcyjny sprawdzaj przez `npm run dev`.
+
 ## Uruchomienie na nowym komputerze
 
 Minimum, by tylko zobaczyć stronę: **Git** + **Node.js**.
@@ -65,7 +76,7 @@ Minimum, by tylko zobaczyć stronę: **Git** + **Node.js**.
 2. Склonuj repo (prywatne — wymaga dostępu do konta / zalogowanego `gh` lub Git):
 
 ```bash
-git clone https://github.com/barmed555-spec/green-forest.git
+git clone https://github.com/wmwebnotifications-lgtm/green-forest.git
 cd green-forest
 ```
 
@@ -130,6 +141,6 @@ Darmowy plan Web3Forms: 250 zgłoszeń/mies. (z zapasem). Ochrona: honeypot + po
 
 - [ ] Klucz Web3Forms w formularzu (patrz sekcja „Formularz kontaktowy" wyżej)
 - [ ] NIP / dane rejestrowe do stopki (placeholder `000-000-00-00`)
-- [ ] Godziny pracy (w schema wpisane orientacyjnie Mo-Sa 07:00-19:00)
+- [ ] Potwierdzić godziny pracy u właściciela przed ponownym dodaniem ich do strony i schema
 - [ ] Google Business Profile (pod SEO lokalne)
 - [x] Domena docelowa: greenforest-pulawy.pl (`canonical`, `sitemap.xml`, `robots.txt`, schema `url`)
