@@ -27,12 +27,13 @@ Nie tworzymy katalogu tagów ani osobnych stron będących kopiami z podmienion�
 
 - Każda indeksowalna strona ma własny tytuł, opis, H1, canonical i og:url. Cele redakcyjne 60 znaków dla tytułu i 70–160 dla opisu nie są limitami Google ani gwarancją wyglądu wyniku.
 - Wszystkie treści i linki są dostępne w HTML. Bez JavaScriptu sekcje oferty pozostają widoczne; JavaScript dodaje animacje, mapę i galerie.
-- Sitemap zawiera wszystkie 15 indeksowalnych adresów. 404 i polityka prywatności są noindex i pozostają poza mapą. Nie wpisujemy sztucznych dat lastmod; changefreq i priority usunięto jako zbędne.
+- Sitemap zawiera wszystkie 15 indeksowalnych adresów. 404 i polityka prywatności są noindex i pozostają poza mapą. Pole `lastmod` aktualizujemy wyłącznie po istotnej zmianie danej strony; data 2026-09-29 dotyczy rzeczywiście poprawionych treści. Nie aktualizujemy jej automatycznie przy każdym wdrożeniu. Pola changefreq i priority pomijamy.
 - Nie zmieniono istniejących adresów podstron. Worker przekierowuje HTTP na HTTPS i utrwala przekierowania wariantów adresów do 301, zachowując parametry. Nieistniejący adres nadal daje 404.
-- Nazwa z www nie rozwiązywała się w DNS w audycie przed wdrożeniem. Kod obsłuży przekierowanie www po podpięciu tej nazwy do Workera w Cloudflare i wystawieniu certyfikatu. Sam commit nie tworzy rekordu DNS.
+- Dnia 29.09.2026 dodano `www.greenforest-pulawy.pl` jako dodatkową domenę tego samego Workera w Cloudflare. Certyfikat i przekierowanie 301 do HTTPS bez www potwierdzono z zachowaniem ścieżki i parametrów. Domena główna i istniejący proces Workers Builds pozostały zachowane.
+- Techniczny adres projektu `workers.dev` i jego wersje podglądowe otrzymują nagłówek `X-Robots-Tag: noindex`. Domena produkcyjna pozostaje indeksowalna. Przy zmianie nazwy projektu/poddomeny Workers sprawdź zakres tej reguły w `src/worker.mjs`.
 - Hreflang pomijamy, ponieważ strona ma tylko wersję polską.
-- FAQ w JSON-LD odpowiada widocznym pytaniom i odpowiedziom. Nie obiecujemy rozszerzonych wyników FAQ — Google ogranicza ich dostępność.
-- Tło lasu i pliki zdjęć drewna zostały zachowane. Obrazy mają wymiary; zdjęcia i filmy poniżej pierwszego ekranu są ładowane leniwie.
+- FAQ w JSON-LD odpowiada widocznym pytaniom i odpowiedziom. Według [aktualizacji Google](https://developers.google.com/search/updates) wyniki rozszerzone FAQ zostały wycofane 7 maja 2026 r.; nie są celem tego oznaczenia.
+- Wygląd tła lasu, logotypów i realizacji pochodzi z oryginalnych materiałów. Nowe wersje WebP ograniczają transfer, a wcześniejsze adresy plików pozostają dostępne. Obrazy mają wymiary; zdjęcia i filmy poniżej pierwszego ekranu są ładowane leniwie.
 
 ## Pomiar GA4
 

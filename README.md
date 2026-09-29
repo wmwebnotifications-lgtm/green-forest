@@ -63,7 +63,7 @@ Strony wycinki, opału i karczowania zawierają informacje potrzebne do zamówie
 Plan fraz, reguły indeksowania, stan integracji z Google i procedura comiesięcznej analizy: [docs/seo-plan.md](docs/seo-plan.md).
 Wyniki audytu wdrożenia: [docs/seo-audit-2026-09-16.md](docs/seo-audit-2026-09-16.md).
 
-`npm run check:seo` wykonuje 17 kontroli technicznych i redakcyjnych, a `npm test` sprawdza przekierowania oraz zgodę na GA4. Kontrole uruchamiają się też w GitHub Actions.
+`npm run check:seo` wykonuje 17 kontroli technicznych i redakcyjnych, a `npm test` sprawdza przekierowania, zgodę na GA4, odnośniki telefonu oraz wysyłkę formularza z atrapą odpowiedzi API. Testy nie wysyłają wiadomości do firmy. Kontrole uruchamiają się też w GitHub Actions.
 GA4 `G-6GWRFWXP2H` działa po zgodzie tylko na domenie produkcyjnej. Przed zgodą Google tag nie jest ładowany. Cofnięcie zgody jest dostępne w stopce. Formularz emituje zdarzenie `generate_lead` po potwierdzonym wysłaniu; kliknięcia telefonu, e-maila i WhatsAppa emitują `contact_click`.
 
 Cloudflare uruchamia `src/worker.mjs` przed zasobami, żeby obsłużyć HTTPS i stałe przekierowania adresów. Lokalny `node server.js` służy do podglądu wyglądu; routing produkcyjny sprawdzaj przez `npm run dev`.
@@ -109,21 +109,13 @@ npm run dev      # wrangler dev -> podgląd zgodny z Cloudflare Workers
 npm run deploy   # wrangler deploy
 ```
 
-## Formularz kontaktowy (Web3Forms) — AKTYWACJA
+## Formularz kontaktowy (Web3Forms)
 
-Formularz wysyła zgłoszenia na **green.forest33@op.pl** przez darmowy serwis
-[Web3Forms](https://web3forms.com) (działa na statycznym hostingu Cloudflare, bez backendu;
-adres e-mail nie jest widoczny w kodzie). **Zanim zacznie wysyłać automatycznie, trzeba wstawić klucz dostępu:**
+Formularze na stronie głównej i `/kontakt/` mają skonfigurowany publiczny klucz Web3Forms i wysyłają zapytania przez AJAX. Po potwierdzonej odpowiedzi sukcesu pokazują komunikat oraz emitują `generate_lead`, jeśli użytkownik zgodził się na statystyki. Kliknięcie numeru telefonu jest osobnym zdarzeniem `contact_click`, nie potwierdzoną rozmową.
 
-1. Wejdź na https://web3forms.com → w polu „Email" wpisz **green.forest33@op.pl** → „Create Access Key".
-2. Na skrzynkę green.forest33@op.pl przyjdzie **Access Key** (ciąg znaków) — potwierdź/aktywuj wg maila.
-3. Podmień w kodzie placeholder `WEB3FORMS_ACCESS_KEY_TUTAJ` na ten klucz — w **dwóch** miejscach:
-   `public/index.html` oraz `public/kontakt/index.html` (pole `name="access_key"`).
-4. Commit + push → Cloudflare wdroży. Wyślij testowe zgłoszenie i sprawdź skrzynkę.
+W czasie wysyłania blokowane są kolejne zgłoszenia tego samego formularza. Błąd API lub sieci zachowuje wpisane dane i wyświetla alternatywny telefon oraz e-mail. Sam obecny klucz nie potwierdza doręczania poczty; audyt nie wysyła próbnych wiadomości do firmy.
 
-Dopóki klucz nie jest wstawiony, formularz **działa awaryjnie** — otwiera program pocztowy
-użytkownika z gotową treścią (mailto). Po wstawieniu klucza wysyła w tle (AJAX), bez przeładowania strony.
-Darmowy plan Web3Forms: 250 zgłoszeń/mies. (z zapasem). Ochrona: honeypot + pole `botcheck`.
+Przy zmianie konfiguracji zaktualizuj oba formularze i uruchom `npm test`. Nie dodawaj prywatnych eksportów klientów ani danych kont do repozytorium.
 
 ## Dane wprowadzone (z Confluence / FB / Fixly)
 
@@ -135,11 +127,11 @@ Darmowy plan Web3Forms: 250 zgłoszeń/mies. (z zapasem). Ochrona: honeypot + po
 - [x] Logo klienta w nagłówku + og-image + favicon
 - [x] Realizacje — 4 rolki osadzone z Facebooka
 - [x] Opinie — 6 prawdziwych opinii z profilu Fixly (średnia 4,5/5), z linkiem do źródła
-- [x] Formularz podpięty pod Web3Forms (wymaga wstawienia klucza — patrz wyżej)
+- [x] Formularz podpięty pod Web3Forms (obsługa przetestowana z atrapą API)
 
 ## Do uzupełnienia (materiały od Kuby)
 
-- [ ] Klucz Web3Forms w formularzu (patrz sekcja „Formularz kontaktowy" wyżej)
+- [x] Klucz Web3Forms obecny w obu formularzach (stan kodu 29.09.2026)
 - [ ] NIP / dane rejestrowe do stopki (placeholder `000-000-00-00`)
 - [ ] Potwierdzić godziny pracy u właściciela przed ponownym dodaniem ich do strony i schema
 - [ ] Google Business Profile (pod SEO lokalne)

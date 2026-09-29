@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>404 - nie znaleziono | Green Forest</title>
   <meta name="robots" content="noindex, follow" />
-  <link rel="icon" href="/assets/favicon.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="icon" href="/assets/favicon-192.png" type="image/png" />
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/fonts/fonts.css" />
   <link rel="stylesheet" href="/styles.css" />
   <style>
     .e404 { min-height: 80vh; display: grid; place-items: center; text-align: center; padding: 3rem clamp(1rem,4vw,2rem); }
@@ -21,9 +21,9 @@
   <link rel="stylesheet" href="/analytics.css" />
 </head>
 <body>
-  <div class="e404">
+  <main class="e404">
     <div>
-      <img src="/assets/logo-header-green.svg" alt="Green Forest" width="1312" height="1199" />
+      <img src="/assets/logo-header-green-160.webp" alt="Green Forest" width="1312" height="1199" />
       <p class="code">404</p>
       <h1>Nie znaleziono strony</h1>
       <p>Ups! Ta strona nie istnieje albo została przeniesiona. Wróć na stronę główną albo napisz do nas - chętnie pomożemy.</p>
@@ -33,7 +33,7 @@
         <a class="btn btn--ghost" href="tel:+48694757680">📞 694 757 680</a>
       </div>
     </div>
-  </div>
+  </main>
 <button type="button" class="analytics-settings" data-analytics-settings hidden>Ustawienia prywatności</button>
 
   <section class="analytics-consent" id="analytics-consent" aria-labelledby="analytics-heading" hidden>

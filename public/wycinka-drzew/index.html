@@ -19,10 +19,10 @@
   <meta property="og:image" content="https://greenforest-pulawy.pl/img/og-image.jpg" />
   <meta property="og:locale" content="pl_PL" />
 
-  <link rel="icon" href="/assets/favicon.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="icon" href="/assets/favicon-192.png" type="image/png" />
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/fonts/fonts.css" />
   <link rel="stylesheet" href="/styles.css" />
 
   <!-- ==== Dane strukturalne: Service + FAQ + Breadcrumb ==== -->
@@ -86,7 +86,7 @@
         ],
         "@id": "https://greenforest-pulawy.pl/#business",
         "image": "https://greenforest-pulawy.pl/img/og-image.jpg",
-        "logo": "https://greenforest-pulawy.pl/assets/logo-header-green.svg"
+        "logo": "https://greenforest-pulawy.pl/assets/logo-header-green-160.webp"
       },
       "@id": "https://greenforest-pulawy.pl/wycinka-drzew/#service",
       "url": "https://greenforest-pulawy.pl/wycinka-drzew/"
@@ -132,7 +132,7 @@
           "name": "Czy potrzebuję zezwolenia na wycinkę drzewa?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "To zależy od gatunku, obwodu pnia i charakteru działki. Osoby prywatne często muszą jedynie zgłosić zamiar wycinki do gminy - podpowiemy, kiedy zgłoszenie jest potrzebne."
+            "text": "Zależy to m.in. od własności działki, celu wycinki, gatunku, obwodu pnia i ochrony drzewa. Przy prywatnym celu właściciela będącego osobą fizyczną może wystarczyć zgłoszenie. Zatrudnienie wykonawcy samo w sobie nie zmienia tej procedury."
           }
         },
         {
@@ -154,7 +154,7 @@
 <body>
   <!-- ==== Nawigacja (linki absolutne do strony głównej) ==== -->
   <header class="nav" id="top">
-    <a class="nav__logo" href="/"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest — wycinka drzew i drewno opałowe, Puławy" width="1312" height="1199" /></a>
+    <a class="nav__logo" href="/"><img class="nav__logo-img" src="/assets/logo-header-green-160.webp" alt="Green Forest — wycinka drzew i drewno opałowe, Puławy" width="1312" height="1199" /></a>
     <nav class="nav__links" aria-label="Główna">
       <a href="/">Start</a>
       <a href="/#o-nas">O nas</a>
@@ -174,7 +174,7 @@
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <div class="mobile-menu__top">
-      <span class="nav__logo"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest" width="1312" height="1199" /></span>
+      <span class="nav__logo"><img class="nav__logo-img" src="/assets/logo-header-green-160.webp" alt="Green Forest" width="1312" height="1199" /></span>
       <button class="mobile-menu__close" aria-label="Zamknij">&times;</button>
     </div>
     <a href="/">Start</a>
@@ -192,6 +192,7 @@
     <div class="socials " aria-label="Media społecznościowe"><a href="https://www.facebook.com/profile.php?id=61585028168766" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.1H7.4V13h2.8v8h3.3z"/></svg></a></div>
   </div>
 
+  <main>
   <nav class="breadcrumb" aria-label="Ścieżka nawigacji">
     <a href="/">Green Forest</a> › <span>Wycinka drzew Puławy</span>
   </nav>
@@ -270,7 +271,7 @@
       </details>
       <details>
         <summary>Czy potrzebuję zezwolenia na wycinkę drzewa?</summary>
-        <p>To zależy od gatunku, obwodu pnia i charakteru działki. Osoby prywatne często muszą jedynie zgłosić zamiar wycinki do gminy - podpowiemy, kiedy zgłoszenie jest potrzebne.</p>
+        <p>Zależy to m.in. od własności działki, celu wycinki, gatunku, obwodu pnia i ochrony drzewa. Przy prywatnym celu właściciela będącego osobą fizyczną może wystarczyć zgłoszenie. Zatrudnienie wykonawcy samo w sobie nie zmienia tej procedury.</p>
       </details>
       <details>
         <summary>Czy sprzątacie po wycince?</summary>
@@ -286,6 +287,8 @@
       </div>
     </div>
   </article>
+
+  </main>
 
   <footer class="footer">
   <div class="footer__cols">

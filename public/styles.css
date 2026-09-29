@@ -102,7 +102,6 @@ p, li, blockquote { text-wrap: pretty; }
 }
 .nav__links a:hover { color: var(--green-600); }
 .nav__links a:hover::after { right: 0; }
-.nav__links a[href="/blog/"], .mobile-menu > a[href="/blog/"] { display: none; }
 @media (max-width: 780px) { .nav__links { display: none; } }
 
 /* ============ Przyciski ============ */
@@ -138,7 +137,7 @@ p, li, blockquote { text-wrap: pretty; }
   content: ""; position: absolute; inset: 0; z-index: -2;
   background:
     linear-gradient(rgba(8, 30, 18, .48), rgba(8, 30, 18, .65)),
-    url('/img/bg.jpg') center center / cover no-repeat;
+    url('/img/bg-1600.webp') center center / cover no-repeat;
   background-color: var(--green-900);
 }
 /* subtelna faktura (grain) */

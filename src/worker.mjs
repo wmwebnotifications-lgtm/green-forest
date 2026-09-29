@@ -1,10 +1,12 @@
 const hostname = 'greenforest-pulawy.pl';
+const previewHostname = 'green-forest.jakubszczerbawmwebsolutions.workers.dev';
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const production = [hostname, 'www.' + hostname].includes(url.hostname);
-    const response = await env.ASSETS.fetch(request);
+    const preview = url.hostname === previewHostname || url.hostname.endsWith('.' + previewHostname);
+    let response = await env.ASSETS.fetch(request);
     // Static Assets uses temporary redirects for /page and /page/index.html.
     // These URLs have permanent canonical destinations on this static site.
     const location = response.headers.get('Location');
@@ -20,7 +22,13 @@ export default {
     }
     if (localRedirect && [302, 307].includes(response.status) && ['GET', 'HEAD'].includes(request.method)) {
       if (!target.search) target.search = url.search;
-      return Response.redirect(target.href, 301);
+      response = Response.redirect(target.href, 301);
+    }
+    if (preview) {
+      // Keep technical preview URLs crawlable so robots can read noindex.
+      // Reuse the response stream without buffering or modifying its body.
+      response = new Response(response.body, response);
+      response.headers.append('X-Robots-Tag', 'noindex');
     }
     return response;
   }

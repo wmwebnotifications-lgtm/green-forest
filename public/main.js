@@ -9,7 +9,8 @@ document.querySelectorAll("#year").forEach(function (el) {
 var nav = document.querySelector(".nav");
 if (nav) {
   var onScroll = function () { nav.classList.toggle("scrolled", window.scrollY > 8); };
-  onScroll();
+  // Pierwszy odczyt pozycji po renderze, bez wymuszania układu całej strony.
+  requestAnimationFrame(function () { requestAnimationFrame(onScroll); });
   window.addEventListener("scroll", onScroll, { passive: true });
 }
 
@@ -41,30 +42,13 @@ if (burger && mm) {
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
 }
 
-// Przyciski „Zadzwoń" — na telefonie dzwonią (tel:), na komputerze prowadzą do formularza
-(function () {
-  var isDesktop = window.matchMedia("(pointer: fine) and (hover: hover)").matches;
-  if (!isDesktop) return; // urządzenia dotykowe: zostawiamy normalne dzwonienie
-  document.querySelectorAll('a.btn[href^="tel:"], a.fab[href^="tel:"]').forEach(function (a) {
-    a.addEventListener("click", function (e) {
-      e.preventDefault();
-      // Jeśli już jesteśmy na stronie kontaktu - przewiń do formularza; inaczej przejdź na /kontakt/
-      var form = document.querySelector(".contact-form");
-      if (form && !document.getElementById("kontakt")) {
-        form.scrollIntoView({ behavior: "smooth", block: "start" });
-        var field = form.querySelector("input, textarea, select");
-        if (field) { setTimeout(function () { try { field.focus({ preventScroll: true }); } catch (_) { field.focus(); } }, 500); }
-      } else {
-        window.location.href = "/kontakt/";
-      }
-    });
-  });
-})();
-
 // Formularz kontaktowy — wysyłka AJAX (Web3Forms) z komunikatem bez przeładowania
 document.querySelectorAll("form.contact-form").forEach(function (form) {
+  var sending = false;
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    if (sending) return;
+    sending = true;
     var status = form.querySelector(".form-status");
     var btn = form.querySelector('button[type="submit"]');
     var setStatus = function (msg, ok) {
@@ -94,63 +78,11 @@ document.querySelectorAll("form.contact-form").forEach(function (form) {
         setStatus("Brak połączenia. Zadzwoń: 694 757 680 lub napisz: green.forest33@op.pl", false);
       })
       .finally(function () {
+        sending = false;
         if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || "Wyślij zapytanie"; }
       });
   });
 });
-
-// Kalkulator wyceny (orientacyjny)
-(function () {
-  var svc = document.getElementById("calc-service");
-  if (!svc) return;
-  var priceEl = document.getElementById("calc-price");
-  var noteEl = document.getElementById("calc-note");
-  var defaultNote = noteEl ? noteEl.textContent : "";
-
-  function fmt(n) { return Math.round(n / 10) * 10; }
-  function zl(n) { return n.toLocaleString("pl-PL") + " zł"; }
-
-  function toggleFields() {
-    var s = svc.value;
-    document.querySelectorAll(".calc__form [data-for]").forEach(function (el) {
-      el.style.display = el.getAttribute("data-for").split(" ").indexOf(s) !== -1 ? "" : "none";
-    });
-  }
-  function num(id, def) { var el = document.getElementById(id); return el ? (parseFloat(el.value) || def) : def; }
-
-  function calc() {
-    var s = svc.value;
-    var urgent = (document.getElementById("calc-urgent") || {}).checked;
-    var price = 0, indyw = false, note = defaultNote;
-    if (s === "wycinka") {
-      var acc = num("calc-access", 1);
-      price = num("calc-height", 200) * acc * num("calc-qty", 1);
-      if (acc >= 2.4) { indyw = true; note = "Trudna wycinka (metoda linowa) - podana kwota to punkt wyjścia, dokładną wycenę robimy po oględzinach."; }
-    } else if (s === "przycinka") {
-      price = 150 * num("calc-access", 1) * num("calc-qty", 1);
-    } else if (s === "zywoplot") {
-      price = Math.max(150, 12 * num("calc-mb", 20));
-    } else if (s === "karczowanie") {
-      price = Math.max(300, 0.6 * num("calc-m2", 300));
-    } else if (s === "drewno") {
-      price = 330 * num("calc-mp", 3);
-      note = "Cena drewna zależy od gatunku i wysuszenia - patrz cennik. Transport gratis do 15 km od Puław. Dalszy dowóz wyceniamy osobno.";
-    }
-    if (urgent && s !== "drewno") price *= 1.3;
-    if (!price) { priceEl.textContent = "—"; return; }
-    var low = fmt(price * 0.85), high = fmt(price * 1.25);
-    priceEl.innerHTML = (indyw ? "od " : "") + zl(low) + " – " + zl(high);
-    if (noteEl) noteEl.textContent = note;
-  }
-
-  svc.addEventListener("change", function () { toggleFields(); calc(); });
-  document.querySelectorAll("#wycena select, #wycena input").forEach(function (el) {
-    el.addEventListener("input", calc);
-    el.addEventListener("change", calc);
-  });
-  toggleFields();
-  calc();
-})();
 
 // Karuzela opinii - strzałki
 (function () {

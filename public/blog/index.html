@@ -13,10 +13,10 @@
   <meta property="og:description" content="Poradniki Green Forest: ile kosztuje wycinka drzewa, kiedy potrzebne pozwolenie, jakie drewno na opał i kiedy przycinać. Praktyczna wiedza z Puław." />
   <meta property="og:image" content="https://greenforest-pulawy.pl/img/og-image.jpg" />
   <meta property="og:locale" content="pl_PL" />
-  <link rel="icon" href="/assets/favicon.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="icon" href="/assets/favicon-192.png" type="image/png" />
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/fonts/fonts.css" />
   <link rel="stylesheet" href="/styles.css" />
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -54,7 +54,7 @@
 </head>
 <body>
   <header class="nav" id="top">
-    <a class="nav__logo" href="/"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest — wycinka drzew i drewno opałowe, Puławy" width="1312" height="1199" /></a>
+    <a class="nav__logo" href="/"><img class="nav__logo-img" src="/assets/logo-header-green-160.webp" alt="Green Forest — wycinka drzew i drewno opałowe, Puławy" width="1312" height="1199" /></a>
     <nav class="nav__links" aria-label="Główna">
       <a href="/">Start</a>
       <a href="/#o-nas">O nas</a>
@@ -74,7 +74,7 @@
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <div class="mobile-menu__top">
-      <span class="nav__logo"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest" width="1312" height="1199" /></span>
+      <span class="nav__logo"><img class="nav__logo-img" src="/assets/logo-header-green-160.webp" alt="Green Forest" width="1312" height="1199" /></span>
       <button class="mobile-menu__close" aria-label="Zamknij">&times;</button>
     </div>
     <a href="/">Start</a>
@@ -92,6 +92,7 @@
     <div class="socials " aria-label="Media społecznościowe"><a href="https://www.facebook.com/profile.php?id=61585028168766" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.1H7.4V13h2.8v8h3.3z"/></svg></a></div>
   </div>
 
+  <main>
   <nav class="breadcrumb" aria-label="Ścieżka nawigacji"><a href="/">Green Forest</a> › <span>Blog</span></nav>
 
   <header class="page-hero">
@@ -103,20 +104,22 @@
   <div class="blog-layout">
     <div>
       <a class="blog-featured" href="/blog/pozwolenie-na-wycinke-drzew/">
-        <div class="blog-featured__media">Zdjęcie</div>
+        <div class="blog-featured__media" aria-hidden="true">Zgłoszenie czy zezwolenie?</div>
         <div class="blog-featured__body">
-          <div class="post-card__meta"><span class="post-tag">Wycinka drzew</span><span class="post-date">3 lipca 2026</span></div>
+          <div class="post-card__meta"><span class="post-tag">Wycinka drzew</span><span class="post-date">Aktualizacja: <time datetime="2026-09-29">29 września 2026</time></span></div>
           <h2>Pozwolenie na wycinkę drzew - kiedy jest potrzebne?</h2>
-          <p>Kiedy wystarczy zgłoszenie, a kiedy potrzebne jest zezwolenie - dla osób prywatnych i firm.</p>
+          <p>Progi obwodu pnia, terminy i formalności dla właścicieli działek.</p>
           <span class="card__link">Czytaj artykuł →</span>
         </div>
       </a>
       <div class="post-list">
-        <a class="post-card" href="/blog/ile-kosztuje-wycinka-drzewa/"><div class="post-card__media">Zdjęcie</div><div class="post-card__meta"><span class="post-tag">Wycinka drzew</span><span class="post-date">12 sierpnia 2026</span></div><h3>Ile kosztuje wycinka drzewa?</h3><p>Od czego naprawdę zależy cena i dlaczego uczciwa firma nie poda jej w ciemno.</p><span>Czytaj →</span></a><a class="post-card" href="/blog/jakie-drewno-na-opal/"><div class="post-card__media">Zdjęcie</div><div class="post-card__meta"><span class="post-tag">Drewno opałowe</span><span class="post-date">20 sierpnia 2026</span></div><h3>Jakie drewno na opał jest najlepsze?</h3><p>Które gatunki grzeją najlepiej, dlaczego liczy się wilgotność i ile sezonować drewno.</p><span>Czytaj →</span></a><a class="post-card" href="/blog/kiedy-przycinac-drzewa-zywoploty/"><div class="post-card__media">Zdjęcie</div><div class="post-card__meta"><span class="post-tag">Pielęgnacja</span><span class="post-date">5 czerwca 2026</span></div><h3>Kiedy przycinać drzewa i żywopłoty?</h3><p>Prosty kalendarz cięcia, który nie osłabi Twoich roślin.</p><span>Czytaj →</span></a>
+        <a class="post-card" href="/blog/ile-kosztuje-wycinka-drzewa/"><div class="post-card__media" aria-hidden="true">Koszt i zakres wycinki</div><div class="post-card__meta"><span class="post-tag">Wycinka drzew</span><span class="post-date">Aktualizacja: <time datetime="2026-09-29">29 września 2026</time></span></div><h3>Ile kosztuje wycinka drzewa?</h3><p>Cennik, zakres pracy i zdjęcia potrzebne do bezpłatnej wyceny.</p><span>Czytaj →</span></a><a class="post-card" href="/blog/jakie-drewno-na-opal/"><div class="post-card__media" aria-hidden="true">Gatunek i wilgotność</div><div class="post-card__meta"><span class="post-tag">Drewno opałowe</span><span class="post-date">Aktualizacja: <time datetime="2026-09-29">29 września 2026</time></span></div><h3>Jakie drewno na opał jest najlepsze?</h3><p>Co sprawdzić przed zakupem: gatunek, wilgotność i sezonowanie.</p><span>Czytaj →</span></a><a class="post-card" href="/blog/kiedy-przycinac-drzewa-zywoploty/"><div class="post-card__media" aria-hidden="true">Terminy pielęgnacji</div><div class="post-card__meta"><span class="post-tag">Pielęgnacja</span><span class="post-date">Aktualizacja: <time datetime="2026-09-29">29 września 2026</time></span></div><h3>Kiedy przycinać drzewa i żywopłoty?</h3><p>Dobór terminu do gatunku, zakres cięcia i ochrona ptaków.</p><span>Czytaj →</span></a>
       </div>
     </div>
     <aside class="blog-sidebar"><div class="widget"><h3>Popularne pytania</h3><ul><li><a href="/blog/pozwolenie-na-wycinke-drzew/">Pozwolenie na wycinkę drzew - kiedy jest potrzebne?</a></li><li><a href="/blog/ile-kosztuje-wycinka-drzewa/">Ile kosztuje wycinka drzewa?</a></li><li><a href="/blog/jakie-drewno-na-opal/">Jakie drewno na opał jest najlepsze?</a></li><li><a href="/blog/kiedy-przycinac-drzewa-zywoploty/">Kiedy przycinać drzewa i żywopłoty?</a></li></ul></div><div class="widget"><h3>Sprawdź nasze usługi</h3><ul><li><a href="/wycinka-drzew/">Wycinka i pielęgnacja drzew</a></li><li><a href="/pielegnacja-zieleni/">Pielęgnacja ogrodów</a></li><li><a href="/tereny-zielone/">Karczowanie i tereny zielone</a></li><li><a href="/drewno-opalowe/">Drewno opałowe i kominkowe</a></li><li><a href="/drewno-tartaczne/">Drewno tartaczne i zrębkowanie</a></li></ul></div><div class="widget widget--cta"><h3>Darmowa wycena</h3><p>Masz drzewo do wycinki albo teren do uporządkowania? Pierwszy krok nic nie kosztuje.</p><a class="btn" href="tel:+48694757680">📞 694 757 680</a></div></aside>
   </div>
+
+  </main>
 
   <footer class="footer">
   <div class="footer__cols">

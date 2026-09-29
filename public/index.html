@@ -20,10 +20,10 @@
   <meta property="og:image" content="https://greenforest-pulawy.pl/img/og-image.jpg" />
   <meta property="og:locale" content="pl_PL" />
 
-  <link rel="icon" href="/assets/favicon.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="icon" href="/assets/favicon-192.png" type="image/png" />
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/fonts/fonts.css" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/firewood.css" />
   <!-- Mapa: Leaflet (OpenStreetMap) - hostowany lokalnie -->
@@ -92,10 +92,10 @@
     "https://www.facebook.com/profile.php?id=61585028168766"
   ],
   "@id": "https://greenforest-pulawy.pl/#business",
-  "logo": "https://greenforest-pulawy.pl/assets/logo-header-green.svg"
+  "logo": "https://greenforest-pulawy.pl/assets/logo-header-green-160.webp"
 }
   </script>
-  <link rel="preload" as="image" href="/img/bg.jpg" />
+  <link rel="preload" as="image" href="/img/bg-1600.webp" fetchpriority="high" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -115,7 +115,7 @@
 <body>
   <!-- ==== Nawigacja ==== -->
   <header class="nav" id="top">
-    <a class="nav__logo" href="/"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest — wycinka drzew i drewno opałowe, Puławy" width="1312" height="1199" /></a>
+    <a class="nav__logo" href="/"><img class="nav__logo-img" src="/assets/logo-header-green-160.webp" alt="Green Forest — wycinka drzew i drewno opałowe, Puławy" width="1312" height="1199" /></a>
     <nav class="nav__links" aria-label="Główna">
       <a href="/">Start</a>
       <a href="/#o-nas">O nas</a>
@@ -135,7 +135,7 @@
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <div class="mobile-menu__top">
-      <span class="nav__logo"><img class="nav__logo-img" src="/assets/logo-header-green.svg" alt="Green Forest" width="1312" height="1199" /></span>
+      <span class="nav__logo"><img class="nav__logo-img" src="/assets/logo-header-green-160.webp" alt="Green Forest" width="1312" height="1199" /></span>
       <button class="mobile-menu__close" aria-label="Zamknij">&times;</button>
     </div>
     <a href="/">Start</a>
@@ -153,10 +153,11 @@
     <div class="socials " aria-label="Media społecznościowe"><a href="https://www.facebook.com/profile.php?id=61585028168766" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.1H7.4V13h2.8v8h3.3z"/></svg></a></div>
   </div>
 
+  <main>
   <!-- ==== Hero ==== -->
   <section class="hero">
     <div class="hero__inner">
-      <img class="hero__logo" src="/img/logo-greenforest.svg" alt="Green Forest" width="1312" height="1199" />
+      <img class="hero__logo" src="/img/logo-greenforest-640.webp" alt="Green Forest" width="1312" height="1199" />
       <p class="hero__eyebrow">Puławy i okolice · dojazd do 150 km</p>
       <div class="hero__winter"><span>Nadchodzi zima!</span><a href="/cennik/#drewno">Sprzedajemy drewno na opał</a></div>
       <h1 class="hero__title"><span>Wycinka drzew i arborystyka</span> <span>w Puławach i okolicy</span></h1>
@@ -319,7 +320,7 @@
       </ul>
     </div>
     <div class="media-placeholder reveal">
-      <img src="/assets/broszura-onas.svg" alt="Broszura Green Forest o firmie" width="1000" height="1000" loading="lazy" decoding="async" />
+      <img src="/assets/broszura-onas.webp" alt="Broszura Green Forest o firmie" width="1000" height="1000" loading="lazy" decoding="async" />
     </div>
   </section>
 
@@ -339,60 +340,32 @@
     </div>
   </section>
 
-  <!-- ==== Kalkulator wyceny ==== -->
+  <!-- ==== Przygotowanie do wyceny ==== -->
   <section class="section" id="wycena">
-    <p class="section__eyebrow reveal">Szybka wycena</p>
-    <h2 class="section__title reveal">Policz orientacyjny koszt w 30 sekund</h2>
-    <p class="section__lead reveal">Wybierz parametry - pokażemy orientacyjny przedział cenowy.<br />Dokładną, <strong>darmową wycenę</strong> potwierdzimy telefonicznie lub po oględzinach.</p>
-    <div class="calc reveal">
-      <div class="calc__form">
-        <label class="calc__field">Usługa
-          <select id="calc-service">
-            <option value="wycinka">Wycinka drzewa</option>
-            <option value="przycinka">Przycinanie / formowanie korony</option>
-            <option value="zywoplot">Przycinanie żywopłotu</option>
-            <option value="karczowanie">Karczowanie / koszenie działki</option>
-            <option value="drewno">Drewno opałowe</option>
-          </select>
-        </label>
-        <label class="calc__field" data-for="wycinka">Wysokość drzewa
-          <select id="calc-height">
-            <option value="200">do 5 m</option>
-            <option value="450">5-10 m</option>
-            <option value="850">10-15 m</option>
-            <option value="1500">powyżej 15 m</option>
-          </select>
-        </label>
-        <label class="calc__field" data-for="wycinka przycinka">Dostęp / otoczenie
-          <select id="calc-access">
-            <option value="1">otwarty teren</option>
-            <option value="1.5">ograniczony dostęp</option>
-            <option value="2.4">nad budynkiem / przy liniach (metoda linowa)</option>
-          </select>
-        </label>
-        <label class="calc__field" data-for="wycinka przycinka">Liczba drzew
-          <input id="calc-qty" type="number" min="1" max="50" value="1" />
-        </label>
-        <label class="calc__field" data-for="zywoplot">Długość żywopłotu (mb)
-          <input id="calc-mb" type="number" min="1" max="500" value="20" />
-        </label>
-        <label class="calc__field" data-for="karczowanie">Powierzchnia (m²)
-          <input id="calc-m2" type="number" min="10" max="20000" value="300" />
-        </label>
-        <label class="calc__field" data-for="drewno">Ilość drewna (mp)
-          <input id="calc-mp" type="number" min="1" max="60" value="3" />
-        </label>
-        <label class="calc__check" data-for="wycinka przycinka zywoplot karczowanie"><input id="calc-urgent" type="checkbox" /> Pilne / poza kolejnością (+30%)</label>
+    <p class="section__eyebrow reveal">Darmowa wycena</p>
+    <h2 class="section__title reveal">Co przygotować do wyceny?</h2>
+    <p class="section__lead reveal">Podaj miejscowość i zakres zlecenia. Zdjęcia drzewa lub działki możesz przesłać e-mailem albo przez WhatsApp. Ustalimy, czy potrzebne są oględziny.</p>
+    <div class="cards reveal">
+      <div class="card">
+        <h3>Wycinka i pielęgnacja drzew</h3>
+        <p>Podaj liczbę drzew i przybliżoną wysokość. Na zdjęciach pokaż całe drzewo, dojazd oraz pobliskie budynki, ogrodzenia i przewody. Określ, czy drewno i gałęzie mają pozostać na posesji.</p>
+        <a class="card__link" href="/wycinka-drzew/">Zakres wycinki i przygotowanie →</a>
       </div>
-      <div class="calc__result">
-        <p class="calc__label">Orientacyjny koszt</p>
-        <p class="calc__price" id="calc-price">—</p>
-        <p class="calc__note" id="calc-note">To wstępny szacunek. Ostateczną, darmową wycenę podamy po kontakcie.</p>
-        <a class="btn" id="calc-cta" href="/kontakt/">Zamów darmową dokładną wycenę</a>
-        <a class="btn btn--ghost" href="tel:+48694757680">📞 694 757 680</a>
+      <div class="card">
+        <h3>Ogród i porządkowanie działki</h3>
+        <p>Opisz potrzebne prace, przybliżoną powierzchnię i stopień zarośnięcia. Przy żywopłocie podaj jego długość i wysokość. Poinformuj o dostępie dla sprzętu i oczekiwanym sposobie uprzątnięcia.</p>
+        <a class="card__link" href="/tereny-zielone/">Karczowanie i koszenie działek →</a>
+      </div>
+      <div class="card">
+        <h3>Drewno opałowe z dowozem</h3>
+        <p>Wskaż gatunek, ilość, długość kawałków i miejscowość dostawy. Przed zamówieniem potwierdzimy dostępność, stopień wysuszenia, jednostkę rozliczenia i koszt transportu.</p>
+        <a class="card__link" href="/cennik/#drewno">Cennik drewna i dowozu →</a>
       </div>
     </div>
-    <p class="small-note reveal" style="text-align:center">Podane kwoty są orientacyjne (dane demonstracyjne) i nie stanowią oferty w rozumieniu Kodeksu cywilnego.</p>
+    <div class="hero__cta reveal">
+      <a class="btn" href="/kontakt/">Wyślij zapytanie o wycenę</a>
+      <a class="btn btn--ghost" href="tel:+48694757680">📞 694 757 680</a>
+    </div>
   </section>
 
   <!-- ==== Realizacje (rolki z FB / wideo z pracy) ==== -->
@@ -423,14 +396,14 @@
     </div>
     <p class="reels__more reveal"><a class="btn btn--ghost" href="https://www.facebook.com/profile.php?id=61585028168766" target="_blank" rel="noopener">Zobacz więcej na Facebooku</a></p>
     <div class="realizacje-images reveal">
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-1.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-1.svg" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-drewno-2.svg" data-lightbox-alt="Green Forest - drewno opałowe"><img src="/assets/green-forest-drewno-2.svg" alt="Green Forest - drewno opałowe" width="1000" height="1000" loading="lazy" decoding="async" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-karczowanie-7.svg" data-lightbox-alt="Green Forest - karczowanie"><img src="/assets/green-forest-karczowanie-7.svg" alt="Green Forest - karczowanie" width="1000" height="1000" loading="lazy" decoding="async" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-prace-w-terenie-8.svg" data-lightbox-alt="Green Forest - prace w terenie"><img src="/assets/green-forest-prace-w-terenie-8.svg" alt="Green Forest - prace w terenie" width="1000" height="1000" loading="lazy" decoding="async" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-rebak-4.svg" data-lightbox-alt="Green Forest - rębakowanie gałęzi"><img src="/assets/green-forest-rebak-4.svg" alt="Green Forest - rębakowanie gałęzi" width="1000" height="1000" loading="lazy" decoding="async" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-3.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-3.svg" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-5.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-5.svg" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
-      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-6.svg" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-6.svg" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-1.webp" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-1-560.webp" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-drewno-2.webp" data-lightbox-alt="Green Forest - drewno opałowe"><img src="/assets/green-forest-drewno-2-560.webp" alt="Green Forest - drewno opałowe" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-karczowanie-7.webp" data-lightbox-alt="Green Forest - karczowanie"><img src="/assets/green-forest-karczowanie-7-560.webp" alt="Green Forest - karczowanie" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-prace-w-terenie-8.webp" data-lightbox-alt="Green Forest - prace w terenie"><img src="/assets/green-forest-prace-w-terenie-8-560.webp" alt="Green Forest - prace w terenie" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-rebak-4.webp" data-lightbox-alt="Green Forest - rębakowanie gałęzi"><img src="/assets/green-forest-rebak-4-560.webp" alt="Green Forest - rębakowanie gałęzi" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-3.webp" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-3-560.webp" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-5.webp" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-5-560.webp" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
+      <button type="button" class="realizacje-image" data-lightbox-src="/assets/green-forest-wycinka-drzew-6.webp" data-lightbox-alt="Green Forest - wycinka drzew"><img src="/assets/green-forest-wycinka-drzew-6-560.webp" alt="Green Forest - wycinka drzew" width="1000" height="1000" loading="lazy" decoding="async" /></button>
     </div>
     <div class="lightbox" id="realizacje-lightbox" aria-hidden="true">
       <button type="button" class="lightbox__close" aria-label="Zamknij podgląd">&times;</button>
@@ -518,8 +491,8 @@
         <p><a href="mailto:green.forest33@op.pl">✉️ green.forest33@op.pl</a></p>
         <p class="eyebrow">Obszar działania</p>
         <p>Puławy i okolice - dojazd do 150 km</p>
-        <p class="eyebrow">Godziny pracy</p>
-        <p>Pon-Sob 07:00-19:00</p>
+        <p class="eyebrow">Termin realizacji</p>
+        <p>Termin wizyty ustalimy podczas kontaktu.</p>
         <div class="socials" aria-label="Media społecznościowe" style="margin-top:1.2rem"><a href="https://www.facebook.com/profile.php?id=61585028168766" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.1H7.4V13h2.8v8h3.3z"/></svg></a></div>
       </div>
       <div class="reveal"><form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
@@ -565,6 +538,8 @@
       </form></div>
     </div>
   </section>
+
+  </main>
 
   <footer class="footer">
   <div class="footer__cols">
@@ -742,9 +717,31 @@
       map.fitBounds(circle.getBounds(), { padding: [20, 20] });
       }
 
-      // Odłóż inicjalizację mapy poza krytyczny render (perf), ale zawsze ją załaduj.
-      if ("requestIdleCallback" in window) { requestIdleCallback(initMap, { timeout: 2000 }); }
-      else { setTimeout(initMap, 1200); }
+      // Pobieraj kafelki dopiero w pobliżu mapy lub przy korzystaniu z miejscowości.
+      if ("IntersectionObserver" in window) {
+        var mapObserver = new IntersectionObserver(function (entries) {
+          if (entries.some(function (entry) { return entry.isIntersecting; })) {
+            initMap();
+            mapObserver.disconnect();
+          }
+        }, { rootMargin: "300px" });
+        mapObserver.observe(el);
+        document.querySelectorAll(".chips").forEach(function (chips) {
+          function prepareMap(event) {
+            if (!event.target.closest("[data-town]")) return;
+            initMap();
+            mapObserver.disconnect();
+          }
+          // Faza capture pozwala podpiąć obsługę miejscowości przed jej kliknięciem.
+          chips.addEventListener("click", prepareMap, true);
+          chips.addEventListener("focusin", prepareMap);
+          chips.addEventListener("pointerdown", prepareMap);
+        });
+      } else if ("requestIdleCallback" in window) {
+        requestIdleCallback(initMap, { timeout: 2000 });
+      } else {
+        setTimeout(initMap, 1200);
+      }
     }
     if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", bootMap); } else { bootMap(); }
   </script>
